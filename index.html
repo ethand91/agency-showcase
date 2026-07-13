@@ -23,7 +23,7 @@
     body {
       background: var(--dark);
       color: var(--text);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', Meiryo, system-ui, -apple-system, sans-serif;
       overflow-x: hidden;
       line-height: 1.6;
     }
@@ -56,6 +56,8 @@
     .nav-links a:hover { color: var(--pink); }
     .nav-cta { padding: 8px 20px; border-radius: 100px; background: linear-gradient(90deg,var(--pink),var(--purple)); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 0 20px rgba(255,110,199,0.4); }
     .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+    .lang-toggle { padding:7px 11px; border-radius:100px; border:1px solid rgba(0,245,255,.32); background:rgba(0,245,255,.07); color:var(--cyan); font:700 11px/1 inherit; letter-spacing:.3px; cursor:pointer; transition:transform .2s, background .2s; }
+    .lang-toggle:hover { transform:translateY(-1px); background:rgba(0,245,255,.14); }
     .btn-patreon { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 100px; background: linear-gradient(90deg,#f96854,#ff424d); color: #fff; font-size: 16px; font-weight: 700; text-decoration: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 0 30px rgba(249,104,84,0.45); }
     .btn-patreon:hover { opacity: 0.85; transform: translateY(-2px); }
 
@@ -266,6 +268,7 @@
     @media (max-width: 900px) {
       .highlight-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
+      .lang-toggle { padding:7px 9px; }
       .mockup-sidebar { display: none; }
       .mockup-content { grid-template-columns: 1fr; }
       .mockup-stats { grid-template-columns: repeat(3,1fr); }
@@ -284,14 +287,17 @@
 <nav>
   <div class="nav-logo">🐾 VTube Agency</div>
   <ul class="nav-links">
-    <li><a href="#features">Features</a></li>
-    <li><a href="#studio">Studio</a></li>
-    <li><a href="#analytics">Analytics</a></li>
-    <li><a href="#autobot">Auto-Bot</a></li>
-    <li><a href="#streaming">Streaming</a></li>
-    <li><a href="#tech">Tech Stack</a></li>
+    <li><a href="#features" data-i18n="nav_features">Features</a></li>
+    <li><a href="#studio" data-i18n="nav_studio">Studio</a></li>
+    <li><a href="#analytics" data-i18n="nav_analytics">Analytics</a></li>
+    <li><a href="#autobot" data-i18n="nav_autobot">Auto-Bot</a></li>
+    <li><a href="#streaming" data-i18n="nav_streaming">Streaming</a></li>
+    <li><a href="#tech" data-i18n="nav_tech">Tech Stack</a></li>
   </ul>
-  <a href="#features" class="nav-cta">Explore Features ↓</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch page language">日本語</button>
+    <a href="#features" class="nav-cta" data-i18n="nav_cta">Explore Features ↓</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -300,17 +306,17 @@
     <div class="hero-inner">
       <div class="hero-eyebrow animate-in">
         <span class="dot"></span>
-        Self-Hosted · AI-Powered · Multi-Platform
+        <span data-i18n="hero_eyebrow">Self-Hosted · AI-Powered · Multi-Platform</span>
       </div>
-      <h1 class="hero-title animate-in delay-1">
+      <h1 class="hero-title animate-in delay-1" data-i18n-html="hero_title">
         Your VTuber's<br/><span class="glow-text">Tiny Media Empire</span>
       </h1>
-      <p class="hero-sub animate-in delay-2">
+      <p class="hero-sub animate-in delay-2" data-i18n="hero_sub">
         Make anime girls sing, react, post everywhere, and keep a desktop pet judging your code — all from one deeply overqualified control room, nya~
       </p>
       <div class="hero-buttons animate-in delay-3">
-        <a href="#features" class="btn-primary">Explore Features</a>
-        <a href="#studio" class="btn-secondary">See the Studio</a>
+        <a href="#features" class="btn-primary" data-i18n="hero_primary">Explore Features</a>
+        <a href="#studio" class="btn-secondary" data-i18n="hero_secondary">See the Studio</a>
       </div>
       <div class="hero-stats animate-in delay-4">
         <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Platforms</span></div>
@@ -451,8 +457,8 @@
 <section id="features">
   <div class="container">
     <div class="section-label"><span class="badge badge-pink">Features</span></div>
-    <h2 class="section-title">Everything a VTuber<br/><span class="glow-text">Could Ever Need</span></h2>
-    <p class="section-sub">15 modules in one sidebar. A complete production studio, scheduling engine, and analytics platform — self-hosted and yours.</p>
+    <h2 class="section-title" data-i18n-html="features_title">Everything a VTuber<br/><span class="glow-text">Could Ever Need</span></h2>
+    <p class="section-sub" data-i18n="features_sub">15 modules in one sidebar. A complete production studio, scheduling engine, and analytics platform — self-hosted and yours.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon-wrap icon-pink">🎬</div>
@@ -552,7 +558,7 @@
 <section class="workflow-section" id="workflow">
   <div class="container">
     <div class="section-label"><span class="badge badge-cyan">How It Works</span></div>
-    <h2 class="section-title">From Idea to <span class="glow-text">Viral Post</span></h2>
+    <h2 class="section-title" data-i18n-html="workflow_title">From Idea to <span class="glow-text">Viral Post</span></h2>
     <p class="section-sub">A fully automated pipeline — from blank canvas to published content on every platform.</p>
     <div class="workflow-steps">
       <div class="workflow-step">
@@ -923,8 +929,8 @@
 <section id="autobot">
   <div class="container">
     <div class="section-label"><span class="badge badge-pink">The 2 AM Shift</span></div>
-    <h2 class="section-title">Sleep While Your Content<br/><span class="glow-text">Empire Does Cardio</span></h2>
-    <p class="section-sub">Daily mode makes tomorrow happen. Buffer mode hoards Shorts for later. Both modes are supervised by a tiny, very determined scheduling goblin.</p>
+    <h2 class="section-title" data-i18n-html="autobot_title">Sleep While Your Content<br/><span class="glow-text">Empire Does Cardio</span></h2>
+    <p class="section-sub" data-i18n="autobot_sub">Daily mode makes tomorrow happen. Buffer mode hoards Shorts for later. Both modes are supervised by a tiny, very determined scheduling goblin.</p>
     <div class="chaos-grid">
       <div class="chaos-card">
         <div class="chaos-heading">
@@ -1212,15 +1218,15 @@
   <div class="cta-glow"></div>
   <div class="container" style="position:relative;z-index:2">
     <div class="section-label"><span class="badge badge-pink">Self-Hosted</span></div>
-    <h2 class="section-title" style="font-size:clamp(32px,5vw,64px)">
+    <h2 class="section-title" style="font-size:clamp(32px,5vw,64px)" data-i18n-html="cta_title">
       Ready to run your<br/><span class="glow-text">VTuber Empire?</span>
     </h2>
-    <p class="section-sub">
+    <p class="section-sub" data-i18n="cta_sub">
       Self-hosted, wildly extensible, and held together by taste, telemetry, and a mildly concerning amount of FFmpeg. Your content. Your rules. Your tiny empire.
     </p>
     <div class="hero-buttons" style="margin-top:32px">
-      <a href="#features" class="btn-primary">Explore Features</a>
-      <a href="#workflow" class="btn-secondary">See How It Works</a>
+      <a href="#features" class="btn-primary" data-i18n="hero_primary">Explore Features</a>
+      <a href="#workflow" class="btn-secondary" data-i18n="cta_secondary">See How It Works</a>
       <a href="https://www.patreon.com/15255453/join" target="_blank" rel="noopener" class="btn-patreon">❤️ Support on Patreon</a>
     </div>
   </div>
@@ -1233,6 +1239,53 @@
 
 <script>
 (function () {
+  const translations = {
+    en: {
+      nav_features: 'Features', nav_studio: 'Studio', nav_analytics: 'Analytics', nav_autobot: 'Auto-Bot', nav_streaming: 'Streaming', nav_tech: 'Tech Stack', nav_cta: 'Explore Features ↓',
+      hero_eyebrow: 'Self-Hosted · AI-Powered · Multi-Platform',
+      hero_title: 'Your VTuber\'s<br/><span class="glow-text">Tiny Media Empire</span>',
+      hero_sub: 'Make anime girls sing, react, post everywhere, and keep a desktop pet judging your code — all from one deeply overqualified control room, nya~',
+      hero_primary: 'Explore Features', hero_secondary: 'See the Studio',
+      features_title: 'Everything a VTuber<br/><span class="glow-text">Could Ever Need</span>',
+      features_sub: '15 modules in one sidebar. A complete production studio, scheduling engine, and analytics platform — self-hosted and yours.',
+      workflow_title: 'From Idea to <span class="glow-text">Viral Post</span>',
+      autobot_title: 'Sleep While Your Content<br/><span class="glow-text">Empire Does Cardio</span>',
+      autobot_sub: 'Daily mode makes tomorrow happen. Buffer mode hoards Shorts for later. Both modes are supervised by a tiny, very determined scheduling goblin.',
+      cta_title: 'Ready to run your<br/><span class="glow-text">VTuber Empire?</span>',
+      cta_sub: 'Self-hosted, wildly extensible, and held together by taste, telemetry, and a mildly concerning amount of FFmpeg. Your content. Your rules. Your tiny empire.',
+      cta_secondary: 'See How It Works'
+    },
+    ja: {
+      nav_features: '機能', nav_studio: 'スタジオ', nav_analytics: '分析', nav_autobot: 'オートボット', nav_streaming: '配信', nav_tech: '技術スタック', nav_cta: '機能をみる ↓',
+      hero_eyebrow: 'セルフホスト · AI搭載 · マルチプラットフォーム',
+      hero_title: 'VTuberのための<br/><span class="glow-text">ちいさなメディア帝国</span>',
+      hero_sub: '歌って、リアクションして、どこにでも投稿して、デスクトップペットにコードを見張らせる。ぜんぶ、この妙に高性能な司令室から。にゃ〜',
+      hero_primary: '機能をみる', hero_secondary: 'スタジオを見る',
+      features_title: 'VTuberに必要なものを<br/><span class="glow-text">ぜんぶ、ひとつに</span>',
+      features_sub: '制作スタジオ、投稿スケジューラー、分析ダッシュボードまで。自分の環境で動かせる、まるごとコンテンツ司令室です。',
+      workflow_title: 'アイデアから<span class="glow-text">バズる投稿まで</span>',
+      autobot_title: '寝ている間にコンテンツ帝国が<br/><span class="glow-text">ちゃんと働く</span>',
+      autobot_sub: 'Dailyモードは明日の投稿をつくり、BufferモードはShortsをためこむ。どちらも小さくて執念深いスケジュールゴブリンが見ています。',
+      cta_title: 'VTuber帝国を<br/><span class="glow-text">動かす準備、できた？</span>',
+      cta_sub: 'セルフホストで、どこまでも拡張可能。センスとテレメトリーと、ちょっと心配になる量のFFmpegで動いています。あなたのコンテンツ、あなたのルール。',
+      cta_secondary: '仕組みを見る'
+    }
+  };
+  const languageToggle = document.getElementById('lang-toggle');
+  function setLanguage(language) {
+    const copy = translations[language];
+    document.documentElement.lang = language;
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = copy[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = copy[el.dataset.i18nHtml]; });
+    languageToggle.textContent = language === 'en' ? '日本語' : 'EN';
+    languageToggle.setAttribute('aria-label', language === 'en' ? '日本語に切り替える' : 'Switch to English');
+    try { localStorage.setItem('vtube-agency-language', language); } catch (_) {}
+  }
+  let language = 'en';
+  try { language = localStorage.getItem('vtube-agency-language') === 'ja' ? 'ja' : 'en'; } catch (_) {}
+  setLanguage(language);
+  languageToggle.addEventListener('click', () => setLanguage(document.documentElement.lang === 'ja' ? 'en' : 'ja'));
+
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
   let W, H;
