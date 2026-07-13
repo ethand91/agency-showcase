@@ -220,6 +220,29 @@
     .tech-name { font-size: 13px; font-weight: 600; }
     .tech-role { font-size: 11px; color: var(--muted); margin-top: 4px; }
 
+    /* CONTENT GOBLIN + OPS */
+    .chaos-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:32px; align-items:stretch; }
+    .chaos-card { background:linear-gradient(145deg,rgba(255,110,199,.11),rgba(176,68,255,.05) 54%,rgba(0,245,255,.06)); border:1px solid rgba(255,110,199,.24); border-radius:22px; padding:28px; box-shadow:0 24px 60px rgba(74,22,111,.18); position:relative; overflow:hidden; }
+    .chaos-card::after { content:''; position:absolute; width:220px; height:220px; border-radius:50%; background:rgba(255,110,199,.12); filter:blur(32px); top:-104px; right:-90px; pointer-events:none; }
+    .chaos-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; position:relative; z-index:1; }
+    .chaos-title { font-size:24px; font-weight:800; line-height:1.15; }
+    .chaos-copy { color:#b9a8d6; font-size:14px; margin:10px 0 20px; max-width:560px; position:relative; z-index:1; }
+    .nightly-flow { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; position:relative; z-index:1; }
+    .nightly-step { background:rgba(7,4,20,.55); border:1px solid rgba(255,255,255,.09); border-radius:13px; padding:13px 10px; min-height:104px; }
+    .nightly-time { font-size:10px; color:var(--cyan); letter-spacing:1px; font-weight:800; }
+    .nightly-name { font-size:13px; font-weight:700; margin-top:7px; }
+    .nightly-desc { font-size:11px; color:var(--muted); margin-top:4px; line-height:1.4; }
+    .chaos-side { display:grid; gap:14px; }
+    .signal-card { background:var(--glass); border:1px solid var(--glass-border); border-radius:18px; padding:20px; }
+    .signal-card h3 { font-size:15px; margin-bottom:11px; }
+    .signal-row { display:flex; align-items:center; gap:9px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.05); font-size:12px; color:#cbbce4; }
+    .signal-row:last-child { border:0; padding-bottom:0; }
+    .signal-row span:nth-child(2) { flex:1; }
+    .signal-dot { width:8px; height:8px; border-radius:50%; background:#00ff94; box-shadow:0 0 10px rgba(0,255,148,.7); }
+    .signal-dot.wait { background:#ffd700; box-shadow:0 0 10px rgba(255,215,0,.6); }
+    .worker-meter { height:8px; background:rgba(255,255,255,.07); border-radius:10px; overflow:hidden; margin:7px 0 15px; }
+    .worker-meter i { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink)); }
+
     /* CTA */
     .cta-section { text-align: center; background: var(--dark2); }
     .cta-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,rgba(176,68,255,0.15) 0%,transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
@@ -247,6 +270,7 @@
       .mockup-content { grid-template-columns: 1fr; }
       .mockup-stats { grid-template-columns: repeat(3,1fr); }
       .workflow-step::after { display: none; }
+      .chaos-grid { grid-template-columns:1fr; }
     }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
@@ -263,6 +287,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#studio">Studio</a></li>
     <li><a href="#analytics">Analytics</a></li>
+    <li><a href="#autobot">Auto-Bot</a></li>
     <li><a href="#streaming">Streaming</a></li>
     <li><a href="#tech">Tech Stack</a></li>
   </ul>
@@ -278,10 +303,10 @@
         Self-Hosted · AI-Powered · Multi-Platform
       </div>
       <h1 class="hero-title animate-in delay-1">
-        Your VTuber's<br/><span class="glow-text">Command Center</span>
+        Your VTuber's<br/><span class="glow-text">Tiny Media Empire</span>
       </h1>
       <p class="hero-sub animate-in delay-2">
-        Record Live2D videos, generate AI scripts, create singing covers, stream live, schedule posts to 8+ platforms — all from one cozy control room.
+        Make anime girls sing, react, post everywhere, and keep a desktop pet judging your code — all from one deeply overqualified control room, nya~
       </p>
       <div class="hero-buttons animate-in delay-3">
         <a href="#features" class="btn-primary">Explore Features</a>
@@ -289,8 +314,8 @@
       </div>
       <div class="hero-stats animate-in delay-4">
         <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Platforms</span></div>
-        <div class="stat"><span class="stat-num">15</span><span class="stat-label">Sidebar Modules</span></div>
-        <div class="stat"><span class="stat-num">43</span><span class="stat-label">Feature Routers</span></div>
+        <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Creative Modules</span></div>
+        <div class="stat"><span class="stat-num">47</span><span class="stat-label">Services (send help)</span></div>
         <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Self-Hosted</span></div>
       </div>
 
@@ -500,6 +525,24 @@
         <h3 class="feature-title">Admin — User &amp; CORS Management</h3>
         <p class="feature-desc">Create users, assign roles (Creator → Editor → Manager → Moderator → Admin), reset passwords, and configure CORS allowed origins. Rate-limited logins with Discord alerts after 3 failed attempts.</p>
         <div class="feature-tags"><span class="feature-tag">5 Roles</span><span class="feature-tag">CORS Config</span><span class="feature-tag">HMAC Sessions</span><span class="feature-tag">Discord Alerts</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-pink">🌙</div>
+        <h3 class="feature-title">Auto-Bot — Overnight Content Goblin</h3>
+        <p class="feature-desc">At 2 AM JST, Daily mode cooks tomorrow’s three Shorts plus three social posts for every connected platform. Buffer mode keeps a ready-to-publish stash so the calendar never looks abandoned.</p>
+        <div class="feature-tags"><span class="feature-tag">Daily + Buffer</span><span class="feature-tag">Editorial Queue</span><span class="feature-tag">JST Scheduling</span><span class="feature-tag">Best-Time Slots</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-cyan">✂️</div>
+        <h3 class="feature-title">Subtitles + Highlight Hunter</h3>
+        <p class="feature-desc">Transcribe long footage, correct captions, generate chapters, detect spicy highlight moments, and turn a stream-sized monster into short-form clips with platform-ready packaging.</p>
+        <div class="feature-tags"><span class="feature-tag">Whisper</span><span class="feature-tag">Chapters</span><span class="feature-tag">Clip Finder</span><span class="feature-tag">Caption Burn-In</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-purple">🧰</div>
+        <h3 class="feature-title">Ops — Workers, Retries &amp; Tiny Alarms</h3>
+        <p class="feature-desc">Send heavy renders to batch workers, track jobs, watch scheduler health and metrics, retry failed uploads with backoff, and ping Discord when a pipeline starts acting possessed.</p>
+        <div class="feature-tags"><span class="feature-tag">Remote Workers</span><span class="feature-tag">/health</span><span class="feature-tag">/metrics</span><span class="feature-tag">JSON Logs</span></div>
       </div>
     </div>
   </div>
@@ -876,6 +919,82 @@
   </div>
 </section>
 
+<!-- OVERNIGHT CONTENT GOBLIN -->
+<section id="autobot">
+  <div class="container">
+    <div class="section-label"><span class="badge badge-pink">The 2 AM Shift</span></div>
+    <h2 class="section-title">Sleep While Your Content<br/><span class="glow-text">Empire Does Cardio</span></h2>
+    <p class="section-sub">Daily mode makes tomorrow happen. Buffer mode hoards Shorts for later. Both modes are supervised by a tiny, very determined scheduling goblin.</p>
+    <div class="chaos-grid">
+      <div class="chaos-card">
+        <div class="chaos-heading">
+          <div>
+            <div class="chaos-title">🌙 Auto-Bot: Daily mode is awake</div>
+            <p class="chaos-copy">Three vertical videos, then tailored posts for every platform you actually configured — held in the editorial queue until a human gives the little monsters a final nod.</p>
+          </div>
+          <span class="status-pill pill-green">● 02:00 JST</span>
+        </div>
+        <div class="nightly-flow">
+          <div class="nightly-step"><div class="nightly-time">02:00</div><div class="nightly-name">🧠 Generate</div><div class="nightly-desc">Scripts, titles, captions, hooks &amp; vibes.</div></div>
+          <div class="nightly-step"><div class="nightly-time">02:18</div><div class="nightly-name">🎬 Render</div><div class="nightly-desc">Three vertical VTuber Shorts enter the oven.</div></div>
+          <div class="nightly-step"><div class="nightly-time">02:42</div><div class="nightly-name">🗓️ Queue</div><div class="nightly-desc">Every platform gets its own good-time slot.</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:18px;position:relative;z-index:1;font-size:12px;color:#cab9e3"><span class="check">✓</span> Generation is automatic. Publishing still waits for editorial approval because we are chaotic, not irresponsible.</div>
+      </div>
+      <div class="chaos-side">
+        <div class="signal-card">
+          <h3>🗓️ Tomorrow’s tiny media empire</h3>
+          <div class="signal-row"><span class="signal-dot"></span><span>Short #1 · “duck army reacts”</span><span class="status-pill pill-green">Ready</span></div>
+          <div class="signal-row"><span class="signal-dot"></span><span>Instagram Reel + caption pack</span><span class="status-pill pill-green">Ready</span></div>
+          <div class="signal-row"><span class="signal-dot wait"></span><span>Bluesky thread · needs review</span><span class="status-pill pill-yellow">Queued</span></div>
+        </div>
+        <div class="signal-card">
+          <h3>📦 Buffer stash: 9 days of snacks</h3>
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted)"><span>27 Shorts ready to deploy</span><span style="color:var(--cyan);font-weight:700">75%</span></div>
+          <div class="worker-meter"><i style="width:75%"></i></div>
+          <div style="font-size:11px;color:var(--muted)">When the calendar gets hungry, Buffer mode feeds it without asking you to become conscious first. iconic.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFRASTRUCTURE -->
+<section style="background:var(--dark2)">
+  <div class="container">
+    <div class="highlight-grid" style="direction:rtl">
+      <div class="highlight-visual" style="direction:ltr">
+        <div class="hl-bar"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span><span class="hl-title-bar">🛠️ Pipeline Health — she is wearing glasses now</span></div>
+        <div class="hl-body">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px">
+            <div class="mstat"><div class="mstat-label">Scheduler</div><div class="mstat-value green" style="font-size:14px">Healthy</div></div>
+            <div class="mstat"><div class="mstat-label">Workers</div><div class="mstat-value cyan" style="font-size:14px">3 / 4</div></div>
+            <div class="mstat"><div class="mstat-label">Retries</div><div class="mstat-value yellow" style="font-size:14px">2</div></div>
+          </div>
+          <div class="terminal">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">agency status --all --please-dont-panic</span></div>
+            <div class="term-success">✓ scheduler heartbeat received · 12s ago</div>
+            <div class="term-info">↻ upload/reel_07.mp4 retrying in 43s (attempt 2/5)</div>
+            <div class="term-output">worker-east-01 rendering cover_lyra.mp4 · 68%</div>
+            <div class="term-success">✓ Discord alert channel connected</div>
+          </div>
+        </div>
+      </div>
+      <div class="highlight-text" style="direction:ltr">
+        <div style="margin-bottom:16px"><span class="badge badge-cyan">Grown-Up Mode</span></div>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(24px,3.5vw,42px)">When the Render Farm<br/><span class="glow-text">Gets A Little Silly</span></h2>
+        <p class="section-sub" style="text-align:left;margin:0 0 28px">The cute buttons are backed by job tracking, remote batch workers, retries, health checks, metrics, and alerts. You can make a media empire without staring at a spinning tab like it owes you rent.</p>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> Offload heavy video work and inspect each job’s state</li>
+          <li><span class="check">✓</span> Retry failed uploads with configurable backoff</li>
+          <li><span class="check">✓</span> Scheduler heartbeat, <code>/health</code>, <code>/metrics</code>, and structured logs</li>
+          <li><span class="check">✓</span> Discord alerts when a pipeline tries to become performance art</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SETTINGS HIGHLIGHT -->
 <section>
   <div class="container">
@@ -1097,7 +1216,7 @@
       Ready to run your<br/><span class="glow-text">VTuber Empire?</span>
     </h2>
     <p class="section-sub">
-      Self-hosted, endlessly extensible, and built for serious creators. Configure it your way and take full control of your content.
+      Self-hosted, wildly extensible, and held together by taste, telemetry, and a mildly concerning amount of FFmpeg. Your content. Your rules. Your tiny empire.
     </p>
     <div class="hero-buttons" style="margin-top:32px">
       <a href="#features" class="btn-primary">Explore Features</a>
