@@ -62,7 +62,7 @@
     .btn-patreon:hover { opacity: 0.85; transform: translateY(-2px); }
 
     /* HERO */
-    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; text-align: center; overflow: hidden; }
+    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; text-align: center; overflow: hidden; background:radial-gradient(circle at 50% 24%,rgba(176,68,255,.14),transparent 42%),radial-gradient(circle at 18% 42%,rgba(0,245,255,.055),transparent 28%),var(--dark); }
     .hero-inner { width: 100%; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px; border-radius: 100px; border: 1px solid rgba(255,110,199,0.3); background: rgba(255,110,199,0.07); font-size: 13px; color: var(--pink); font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 28px; }
     .hero-eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); animation: pulse 2s infinite; }
@@ -245,6 +245,31 @@
     .worker-meter { height:8px; background:rgba(255,255,255,.07); border-radius:10px; overflow:hidden; margin:7px 0 15px; }
     .worker-meter i { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink)); }
 
+    /* ENTERTAINMENT BRAIN */
+    .brain-section { background:linear-gradient(180deg,var(--dark2),rgba(13,8,32,.96)); overflow:hidden; }
+    .brain-shell { display:grid; grid-template-columns:.9fr 1.1fr; gap:48px; align-items:center; }
+    .brain-visual { position:relative; min-height:500px; border:1px solid rgba(0,245,255,.16); border-radius:24px; background:radial-gradient(circle at 50% 45%,rgba(176,68,255,.18),transparent 44%),rgba(5,2,15,.72); padding:28px; box-shadow:0 30px 90px rgba(0,0,0,.42); overflow:hidden; }
+    .brain-visual::before { content:''; position:absolute; inset:18% 25%; border:1px solid rgba(255,110,199,.2); border-radius:50%; box-shadow:0 0 55px rgba(176,68,255,.18); }
+    .phase-track { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; position:relative; z-index:2; }
+    .phase { padding:8px 5px; border-radius:9px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.035); color:var(--muted); font-size:9px; text-align:center; text-transform:uppercase; letter-spacing:.45px; }
+    .phase.active { color:#fff; border-color:rgba(255,110,199,.5); background:linear-gradient(135deg,rgba(255,110,199,.25),rgba(176,68,255,.2)); box-shadow:0 0 18px rgba(255,110,199,.2); }
+    .brain-core { width:148px; height:148px; border-radius:50%; position:absolute; left:50%; top:48%; transform:translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; justify-content:center; background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.16),rgba(176,68,255,.26) 35%,rgba(5,2,15,.9) 72%); border:1px solid rgba(255,110,199,.45); box-shadow:0 0 0 12px rgba(176,68,255,.05),0 0 70px rgba(176,68,255,.34); z-index:2; text-align:center; }
+    .brain-core strong { font-size:14px; }
+    .brain-core span { font-size:10px; color:var(--cyan); margin-top:3px; }
+    .brain-signal { position:absolute; z-index:3; width:132px; padding:11px 12px; border:1px solid var(--glass-border); border-radius:12px; background:rgba(13,8,32,.92); backdrop-filter:blur(10px); }
+    .brain-signal b { display:block; font-size:11px; margin-bottom:3px; }
+    .brain-signal small { display:block; color:var(--muted); font-size:9px; line-height:1.4; }
+    .signal-chat { left:24px; top:118px; }
+    .signal-memory { right:24px; top:150px; }
+    .signal-score { left:32px; bottom:35px; }
+    .signal-action { right:24px; bottom:35px; }
+    .energy-line { position:absolute; left:28px; right:28px; bottom:112px; height:52px; opacity:.75; z-index:1; }
+    .energy-line svg { width:100%; height:100%; }
+    .brain-points { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:28px; }
+    .brain-point { padding:15px; border:1px solid var(--glass-border); border-radius:14px; background:var(--glass); }
+    .brain-point strong { display:block; font-size:13px; margin-bottom:4px; }
+    .brain-point span { color:var(--muted); font-size:11px; line-height:1.5; display:block; }
+
     /* CTA */
     .cta-section { text-align: center; background: var(--dark2); }
     .cta-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,rgba(176,68,255,0.15) 0%,transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
@@ -274,6 +299,17 @@
       .mockup-stats { grid-template-columns: repeat(3,1fr); }
       .workflow-step::after { display: none; }
       .chaos-grid { grid-template-columns:1fr; }
+      .brain-shell { grid-template-columns:1fr; }
+    }
+    @media (max-width: 560px) {
+      .brain-visual { min-height:570px; padding:18px; }
+      .phase-track { grid-template-columns:repeat(2,1fr); }
+      .brain-signal { width:126px; }
+      .signal-chat { left:14px; top:155px; }
+      .signal-memory { right:14px; top:192px; }
+      .signal-score { left:14px; bottom:34px; }
+      .signal-action { right:14px; bottom:34px; }
+      .brain-points { grid-template-columns:1fr; }
     }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
@@ -288,6 +324,7 @@
   <div class="nav-logo">🐾 VTube Agency</div>
   <ul class="nav-links">
     <li><a href="#features" data-i18n="nav_features">Features</a></li>
+    <li><a href="#intelligence">Intelligence</a></li>
     <li><a href="#studio" data-i18n="nav_studio">Studio</a></li>
     <li><a href="#analytics" data-i18n="nav_analytics">Analytics</a></li>
     <li><a href="#autobot" data-i18n="nav_autobot">Auto-Bot</a></li>
@@ -312,7 +349,7 @@
         Your VTuber's<br/><span class="glow-text">Tiny Media Empire</span>
       </h1>
       <p class="hero-sub animate-in delay-2" data-i18n="hero_sub">
-        Make anime girls sing, react, post everywhere, and keep a desktop pet judging your code — all from one deeply overqualified control room, nya~
+        Create, stream, remember the room, and grow while you sleep. One local-first control room for Live2D talent that can make media, run a real show, and learn what worked, nya~
       </p>
       <div class="hero-buttons animate-in delay-3">
         <a href="#features" class="btn-primary" data-i18n="hero_primary">Explore Features</a>
@@ -320,8 +357,8 @@
       </div>
       <div class="hero-stats animate-in delay-4">
         <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Platforms</span></div>
-        <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Creative Modules</span></div>
-        <div class="stat"><span class="stat-num">47</span><span class="stat-label">Services (send help)</span></div>
+        <div class="stat"><span class="stat-num">54</span><span class="stat-label">Control Surfaces</span></div>
+        <div class="stat"><span class="stat-num">90</span><span class="stat-label">Services (send help)</span></div>
         <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Self-Hosted</span></div>
       </div>
 
@@ -458,7 +495,7 @@
   <div class="container">
     <div class="section-label"><span class="badge badge-pink">Features</span></div>
     <h2 class="section-title" data-i18n-html="features_title">Everything a VTuber<br/><span class="glow-text">Could Ever Need</span></h2>
-    <p class="section-sub" data-i18n="features_sub">15 modules in one sidebar. A complete production studio, scheduling engine, and analytics platform — self-hosted and yours.</p>
+    <p class="section-sub" data-i18n="features_sub">20 feature families spanning creation, live intelligence, community, growth, and operations — self-hosted and yours.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon-wrap icon-pink">🎬</div>
@@ -550,6 +587,36 @@
         <p class="feature-desc">Send heavy renders to batch workers, track jobs, watch scheduler health and metrics, retry failed uploads with backoff, and ping Discord when a pipeline starts acting possessed.</p>
         <div class="feature-tags"><span class="feature-tag">Remote Workers</span><span class="feature-tag">/health</span><span class="feature-tag">/metrics</span><span class="feature-tag">JSON Logs</span></div>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-pink">🧠</div>
+        <h3 class="feature-title">Entertainment Brain — Episode Director</h3>
+        <p class="feature-desc">A persistent showrunner moves each stream from cold open to payoff and callback, watches audience energy, scores spoken beats, and starts a fresh mini-episode instead of drifting into endless AI small talk.</p>
+        <div class="feature-tags"><span class="feature-tag">Show Arcs</span><span class="feature-tag">Audience Energy</span><span class="feature-tag">Beat Scoring</span><span class="feature-tag">Persistent State</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-cyan">💞</div>
+        <h3 class="feature-title">Viewer Memory — Bonds with Boundaries</h3>
+        <p class="feature-desc">Recognize returning viewers with semantic memory and relationship dimensions while keeping identity linking consent-gated. Moderators can inspect or erase memories and bond levels independently.</p>
+        <div class="feature-tags"><span class="feature-tag">Semantic Recall</span><span class="feature-tag">Viewer Bonds</span><span class="feature-tag">Consent Linking</span><span class="feature-tag">Privacy Controls</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-green">🎭</div>
+        <h3 class="feature-title">Human + AI Live — Co-Stream Pilot</h3>
+        <p class="feature-desc">Drive one Live2D model from webcam blendshapes while an AI co-host listens, answers, emotes, and yields when interrupted. Real visemes, turn cancellation, provider-swappable voice and full WebM recording included.</p>
+        <div class="feature-tags"><span class="feature-tag">Face Tracking</span><span class="feature-tag">Barge-In</span><span class="feature-tag">Real Visemes</span><span class="feature-tag">Duo Recording</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-yellow">🫧</div>
+        <h3 class="feature-title">Natural Presence — Motion + Backchannels</h3>
+        <p class="feature-desc">Shared motion timing aligns visemes, prosody, emotions, blinks, gaze, breathing, and physics. Listening characters add tiny cached “mhm” and “oh!” backchannels without stealing the speaker’s turn.</p>
+        <div class="feature-tags"><span class="feature-tag">Motion Sync</span><span class="feature-tag">Prosody Events</span><span class="feature-tag">Backchannels</span><span class="feature-tag">Live2D Physics</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-orange">✅</div>
+        <h3 class="feature-title">Governed Autopilot — Safer at Scale</h3>
+        <p class="feature-desc">Platform-aware daily caps, idempotent scheduling, honest automated-review trails, synthetic-media disclosure, failure visibility, and pipeline smoke tests keep overnight generation ambitious without becoming reckless.</p>
+        <div class="feature-tags"><span class="feature-tag">Daily Caps</span><span class="feature-tag">No Duplicates</span><span class="feature-tag">Disclosure</span><span class="feature-tag">Smoke Tests</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -559,7 +626,7 @@
   <div class="container">
     <div class="section-label"><span class="badge badge-cyan">How It Works</span></div>
     <h2 class="section-title" data-i18n-html="workflow_title">From Idea to <span class="glow-text">Viral Post</span></h2>
-    <p class="section-sub">A fully automated pipeline — from blank canvas to published content on every platform.</p>
+    <p class="section-sub">A supervised pipeline — from blank canvas to disclosed, review-ready content for every platform.</p>
     <div class="workflow-steps">
       <div class="workflow-step">
         <div class="step-num">1</div>
@@ -583,8 +650,50 @@
       </div>
       <div class="workflow-step">
         <div class="step-num">5</div>
-        <div class="step-title">Schedule & Post</div>
-        <div class="step-desc">APScheduler auto-uploads to 8+ platforms at the right time</div>
+        <div class="step-title">Review & Schedule</div>
+        <div class="step-desc">Governance checks, disclosure metadata, daily caps, and best-time slots</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTERTAINMENT BRAIN -->
+<section class="brain-section" id="intelligence">
+  <div class="container">
+    <div class="brain-shell">
+      <div class="highlight-text">
+        <div style="margin-bottom:16px"><span class="badge badge-cyan">New · Live Intelligence</span></div>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(28px,4vw,48px)">
+          Not Just a Chatbot.<br/><span class="glow-text">A Tiny Showrunner.</span>
+        </h2>
+        <p class="section-sub" style="text-align:left;margin:0 0 26px;max-width:570px">
+          The entertainment brain gives every livestream an episode arc, persistent character state, audience awareness, and a memory of what made the room light up. The result is a show that accumulates meaning instead of an endless bucket of unrelated one-liners.
+        </p>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> Advances from cold open → premise → escalation → complication → payoff → callback → ending</li>
+          <li><span class="check">✓</span> Prioritizes chat, follows, polls, gameplay moments, and director cues while cancelling stale speech</li>
+          <li><span class="check">✓</span> Learns successful tension, reveal, and challenge structures without photocopying the same joke forever</li>
+          <li><span class="check">✓</span> Remembers viewer facts and shared moments with novelty-aware semantic recall</li>
+          <li><span class="check">✓</span> Screens injection, abuse, link spam, and keyboard-mashing before messages reach the model</li>
+        </ul>
+        <div class="brain-points">
+          <div class="brain-point"><strong>⚡ Three model tiers</strong><span>Reflex, livestream, and bulk work get latency budgets that fit the moment.</span></div>
+          <div class="brain-point"><strong>🧹 Privacy is operable</strong><span>Memories, bonds, and consent-linked identities can be inspected or erased separately.</span></div>
+        </div>
+      </div>
+      <div class="brain-visual" aria-label="Entertainment brain showrunner diagram">
+        <div class="phase-track">
+          <div class="phase">Cold open</div><div class="phase">Premise</div><div class="phase active">Escalation</div><div class="phase">Complication</div>
+          <div class="phase">Payoff</div><div class="phase">Callback</div><div class="phase">Ending</div><div class="phase">New episode ↻</div>
+        </div>
+        <div class="brain-core"><div style="font-size:34px">🧠</div><strong>SHOWRUNNER</strong><span>audience energy 0.82</span></div>
+        <div class="brain-signal signal-chat"><b style="color:var(--cyan)">💬 Chat burst</b><small>“the duck army is back”<br/>priority: immediate</small></div>
+        <div class="brain-signal signal-memory"><b style="color:var(--pink)">💞 Memory recalled</b><small>Helpful Fan · shared joke<br/>novelty: high</small></div>
+        <div class="brain-signal signal-score"><b style="color:#ffd700">✨ Beat score 8.7</b><small>specific · on-persona<br/>clipworthy</small></div>
+        <div class="brain-signal signal-action"><b style="color:#00ff94">🎬 Next action</b><small>pay off prediction<br/>then callback</small></div>
+        <div class="energy-line" aria-hidden="true">
+          <svg viewBox="0 0 500 60" preserveAspectRatio="none"><path d="M0 48 C45 43 48 24 90 34 S150 54 184 25 S244 8 278 30 S330 49 365 18 S425 10 500 4" fill="none" stroke="url(#energyGradient)" stroke-width="3"/><defs><linearGradient id="energyGradient"><stop stop-color="#00f5ff"/><stop offset=".55" stop-color="#b044ff"/><stop offset="1" stop-color="#ff6ec7"/></linearGradient></defs></svg>
+        </div>
       </div>
     </div>
   </div>
@@ -764,16 +873,19 @@
           The Stream Now<br/><span class="glow-text">Celebrates Itself</span>
         </h2>
         <p class="section-sub" style="text-align:left;margin:0 0 28px">
-          Dual VTuber streams with AI auto-banter — and now live follow goals, fireworks, sprite greeters for every new follower, and a daily auto-stream window. we are SO automated it's almost rude, nya~ 🍶
+          Dual VTuber streams now have episode direction, audience-aware interrupts, natural listening reactions, resilient multistream output, and a daily auto-stream window. We are SO automated it's almost rude, nya~ 🍶
         </p>
         <ul class="feature-list">
-          <li><span class="check">✓</span> Two Live2D characters in a shared WebSocket hub — and nobody gets cut off mid-sentence anymore (we fixed it, don't ask about the dark times)</li>
+          <li><span class="check">✓</span> Episode-level showrunner with persistent phases, character state, audience energy, callbacks, and clean mini-episode endings</li>
+          <li><span class="check">✓</span> Priority speech queue with reflex-model replies, operator interrupts, stale-turn cancellation, and live chat velocity signals</li>
+          <li><span class="check">✓</span> Natural backchannel audio, emotion-aware motion, real visemes, prosody events, gaze, breathing, and synchronized Live2D physics</li>
           <li><span class="check">✓</span> 🎯 Live follow goal widget synced straight from Kick — Cloudflare tried to stop us. Cloudflare failed. curl_cffi my beloved 💅</li>
           <li><span class="check">✓</span> 🎆 Goal reached = fireworks + FULL PARTY mode: every character animation fires at once</li>
           <li><span class="check">✓</span> Goal auto-doubles itself after every win, bc the grind is eternal bestie</li>
           <li><span class="check">✓</span> 👋 Lyra waves at every single new follower · Lunari does a polite lil bow · chibi NekoBell jogs across your screen at a respectable, slightly tipsy pace</li>
           <li><span class="check">✓</span> 🌅 Daily auto-stream window — the girls clock in, say hi, stream, and clock out 🌙 while you remain fully horizontal</li>
-          <li><span class="check">✓</span> Twitch &amp; Kick chat listeners, OBS WebSocket or direct FFmpeg RTMP, Discord life diaries 3× a day</li>
+          <li><span class="check">✓</span> One FFmpeg encode relayed to primary RTMP plus YouTube, Twitch, and Kick outputs with per-destination fault isolation</li>
+          <li><span class="check">✓</span> Twitch &amp; Kick chat listeners, official Kick webhooks, gameplay frame comparison, OBS control, and 24/7 autopilot</li>
         </ul>
       </div>
       <div class="highlight-visual">
@@ -1250,10 +1362,10 @@
       nav_features: 'Features', nav_studio: 'Studio', nav_analytics: 'Analytics', nav_autobot: 'Auto-Bot', nav_streaming: 'Streaming', nav_tech: 'Tech Stack', nav_cta: 'Explore Features ↓',
       hero_eyebrow: 'Self-Hosted · AI-Powered · Multi-Platform',
       hero_title: 'Your VTuber\'s<br/><span class="glow-text">Tiny Media Empire</span>',
-      hero_sub: 'Make anime girls sing, react, post everywhere, and keep a desktop pet judging your code — all from one deeply overqualified control room, nya~',
+      hero_sub: 'Create, stream, remember the room, and grow while you sleep. One local-first control room for Live2D talent that can make media, run a real show, and learn what worked, nya~',
       hero_primary: 'Explore Features', hero_secondary: 'See the Studio',
       features_title: 'Everything a VTuber<br/><span class="glow-text">Could Ever Need</span>',
-      features_sub: '15 modules in one sidebar. A complete production studio, scheduling engine, and analytics platform — self-hosted and yours.',
+      features_sub: '20 feature families spanning creation, live intelligence, community, growth, and operations — self-hosted and yours.',
       workflow_title: 'From Idea to <span class="glow-text">Viral Post</span>',
       autobot_title: 'Sleep While Your Content<br/><span class="glow-text">Empire Does Cardio</span>',
       autobot_sub: 'Daily mode makes tomorrow happen. Buffer mode hoards Shorts for later. Both modes are supervised by a tiny, very determined scheduling goblin.',
@@ -1265,7 +1377,7 @@
       nav_features: '機能', nav_studio: 'スタジオ', nav_analytics: '分析', nav_autobot: 'オートボット', nav_streaming: '配信', nav_tech: '技術スタック', nav_cta: '機能をみる ↓',
       hero_eyebrow: 'セルフホスト · AI搭載 · マルチプラットフォーム',
       hero_title: 'VTuberのための<br/><span class="glow-text">ちいさなメディア帝国</span>',
-      hero_sub: '歌って、リアクションして、どこにでも投稿して、デスクトップペットにコードを見張らせる。ぜんぶ、この妙に高性能な司令室から。にゃ〜',
+      hero_sub: '制作して、配信して、視聴者との時間を覚え、眠っている間にも成長する。メディアを作り、番組を動かし、成功から学ぶLive2Dタレントのためのローカルファースト司令室。にゃ〜',
       hero_primary: '機能をみる', hero_secondary: 'スタジオを見る',
       features_title: 'VTuberに必要なものを<br/><span class="glow-text">ぜんぶ、ひとつに</span>',
       features_sub: '制作スタジオ、投稿スケジューラー、分析ダッシュボードまで。自分の環境で動かせる、まるごとコンテンツ司令室です。',
@@ -1281,14 +1393,14 @@
   // Keep the demo UI bilingual too: text nodes retain their original English so
   // the toggle can round-trip cleanly without duplicating this entire page.
   const japaneseText = new Map([
-    ['Features', '機能'], ['How It Works', '仕組み'], ['Studio + Reactions', 'スタジオ + リアクション'], ['Analytics & SEO', '分析 + SEO'], ['Live Streaming', 'ライブ配信'], ['Trends & Art', 'トレンド + アート'], ['Settings & Integrations', '設定 + 連携'], ['VTuber Management', 'VTuber管理'], ['Access Control', 'アクセス管理'], ['Tech Stack', '技術スタック'], ['Self-Hosted', 'セルフホスト'],
+    ['Features', '機能'], ['Intelligence', 'インテリジェンス'], ['How It Works', '仕組み'], ['Studio + Reactions', 'スタジオ + リアクション'], ['Analytics & SEO', '分析 + SEO'], ['Live Streaming', 'ライブ配信'], ['New · Live Intelligence', '新機能 · ライブ知能'], ['Trends & Art', 'トレンド + アート'], ['Settings & Integrations', '設定 + 連携'], ['VTuber Management', 'VTuber管理'], ['Access Control', 'アクセス管理'], ['Tech Stack', '技術スタック'], ['Self-Hosted', 'セルフホスト'],
     ['Platforms', 'プラットフォーム'], ['Sidebar Modules', 'サイドバーモジュール'], ['Feature Routers', '機能ルーター'], ['Platforms', 'プラットフォーム'], ['Post to all your platforms automatically', 'すべてのプラットフォームへ自動投稿'],
-    ['From Idea to Viral Post', 'アイデアからバズる投稿まで'], ['A fully automated pipeline — from blank canvas to published content on every platform.', 'まっさらなアイデアから、すべてのプラットフォームへの公開までを自動化するパイプライン。'],
-    ['AI Script', 'AIスクリプト'], ['Studio Record', 'スタジオ収録'], ['Auto-Subtitle', '自動字幕'], ['Best Thumbnail', '最高のサムネイル'], ['Schedule & Post', '予約して投稿'],
+    ['From Idea to Viral Post', 'アイデアからバズる投稿まで'], ['A supervised pipeline — from blank canvas to disclosed, review-ready content for every platform.', 'まっさらなアイデアから、開示情報つきでレビュー可能な各プラットフォーム向けコンテンツまで。監督可能な制作パイプラインです。'],
+    ['AI Script', 'AIスクリプト'], ['Studio Record', 'スタジオ収録'], ['Auto-Subtitle', '自動字幕'], ['Best Thumbnail', '最高のサムネイル'], ['Review & Schedule', 'レビューして予約'],
     ['Ollama or OpenAI writes the script, title, description & hashtags', 'OllamaまたはOpenAIが台本・タイトル・説明文・ハッシュタグを作成'], ['Headless Live2D recording with emotion markers & TTS voice', '感情マーカーとTTS音声対応のヘッドレスLive2D収録'], ['Whisper transcribes, corrections applied, subtitles burned in', 'Whisperで文字起こし、修正後に字幕を焼き込み'], ['AI picks the best frame, applies style, adds text overlay', 'AIが最高のフレームを選び、スタイルと文字を追加'], ['APScheduler auto-uploads to 8+ platforms at the right time', 'APSchedulerが最適な時間に8種類以上のプラットフォームへ自動投稿'],
     ['Record Any Video, No GPU Needed', 'どんな動画も収録。GPUは不要'], ['Grade Your Content Before You Post', '投稿前にコンテンツを採点'], ['Two Characters, One Epic Stream', 'ふたりのキャラクター、ひとつの最高な配信'], ['The Stream Now', '配信はもう'], ['Celebrates Itself', '自分でお祝いします'], ['✨ New Drops', '✨ 新機能'], ['Stay Ahead of Every Trend', 'どのトレンドよりも先へ'], ['Everything Configured in One Place', 'すべての設定をひとつの場所で'], ['Manage Your Whole Roster', 'チーム全体をまとめて管理'], ['Built for Full Agencies', '本格的なエージェンシーのために'], ['Powered by the Best Tools Available', '最高のツールで動いています'],
     ['The Reaction Studio lets you pick any YouTube video, set your angle, configure beats and target length, then AI generates the script and records the video automatically.', 'リアクションスタジオでは、YouTube動画を選び、切り口・ビート数・長さを指定すると、AIが台本作成から収録まで自動で行います。'], ['Real-time SEO scoring, top-performing content by platform, best posting times, and AI title suggestions — all before you hit publish.', 'リアルタイムSEO評価、プラットフォーム別の人気コンテンツ、最適投稿時間、AIタイトル案を、公開前にまとめて確認できます。'], ['Dual VTuber streams with AI auto-banter — and now live follow goals, fireworks, sprite greeters for every new follower, and a daily auto-stream window. we are SO automated it\'s almost rude, nya~ 🍶', 'AI掛け合いのデュアルVTuber配信に、ライブフォローゴール、花火、新規フォロワーごとのスプライト挨拶、毎日の自動配信ウィンドウが加わりました。自動化しすぎてもはや失礼なレベルです、にゃ〜🍶'], ['Monitor what\'s rising right now by region and niche, then generate on-trend art and thumbnails instantly.', '地域やジャンルごとの急上昇トレンドを監視し、流行に合わせたアートとサムネイルをすぐ生成。'], ['Hook up OBS, Stable Diffusion, Discord webhooks, PostgreSQL, and email reports — all from the Settings page.', 'OBS、Stable Diffusion、Discord Webhook、PostgreSQL、メールレポートを、設定ページからまとめて接続。'], ['Create and manage multiple VTuber profiles, each with their own platform credentials, Twitch bot, Discord persona, and per-VTuber analytics.', '複数のVTuberプロフィールを作成・管理。各プロフィールにプラットフォーム認証、Twitchボット、Discordペルソナ、専用分析を設定できます。'], ['5 permission levels — Creator → Editor → Manager → Moderator → Admin — so your whole team can collaborate safely.', 'Creator → Editor → Manager → Moderator → Adminの5段階の権限で、チーム全体が安全に協業できます。'], ['A carefully chosen stack that prioritizes async performance, AI extensibility, and zero cloud lock-in.', '非同期パフォーマンス、AI拡張性、クラウドロックインなしを重視して選んだ技術スタック。'],
-    ['Studio — Live2D Recording', 'スタジオ — Live2D収録'], ['Singing — Full Cover Pipeline', '歌唱 — フルカバーパイプライン'], ['Live — Dual VTuber Streaming', 'ライブ — デュアルVTuber配信'], ['Reactions — AI Reaction Studio', 'リアクション — AIリアクションスタジオ'], ['Art — AI Image Generator', 'アート — AI画像ジェネレーター'], ['Thumbnails — Smart Generator', 'サムネイル — スマート生成'], ['Analytics — Insights Dashboard', '分析 — インサイトダッシュボード'], ['SEO — Title & Keyword Optimizer', 'SEO — タイトル・キーワード最適化'], ['Trends — Real-Time Monitoring', 'トレンド — リアルタイム監視'], ['Interactions — Inbox', '交流 — 受信トレイ'], ['Superchats — Revenue Dashboard', 'スーパーチャット — 収益ダッシュボード'], ['Admin — User & CORS Management', '管理 — ユーザー・CORS管理'], ['Auto-Bot — Overnight Content Goblin', 'Auto-Bot — 深夜のコンテンツゴブリン'], ['Subtitles + Highlight Hunter', '字幕 + ハイライトハンター'], ['Ops — Workers, Retries & Tiny Alarms', '運用 — ワーカー・リトライ・ちいさなアラーム'],
+    ['Studio — Live2D Recording', 'スタジオ — Live2D収録'], ['Singing — Full Cover Pipeline', '歌唱 — フルカバーパイプライン'], ['Live — Dual VTuber Streaming', 'ライブ — デュアルVTuber配信'], ['Reactions — AI Reaction Studio', 'リアクション — AIリアクションスタジオ'], ['Art — AI Image Generator', 'アート — AI画像ジェネレーター'], ['Thumbnails — Smart Generator', 'サムネイル — スマート生成'], ['Analytics — Insights Dashboard', '分析 — インサイトダッシュボード'], ['SEO — Title & Keyword Optimizer', 'SEO — タイトル・キーワード最適化'], ['Trends — Real-Time Monitoring', 'トレンド — リアルタイム監視'], ['Interactions — Inbox', '交流 — 受信トレイ'], ['Superchats — Revenue Dashboard', 'スーパーチャット — 収益ダッシュボード'], ['Admin — User & CORS Management', '管理 — ユーザー・CORS管理'], ['Auto-Bot — Overnight Content Goblin', 'Auto-Bot — 深夜のコンテンツゴブリン'], ['Subtitles + Highlight Hunter', '字幕 + ハイライトハンター'], ['Ops — Workers, Retries & Tiny Alarms', '運用 — ワーカー・リトライ・ちいさなアラーム'], ['Entertainment Brain — Episode Director', 'エンタメ脳 — エピソードディレクター'], ['Viewer Memory — Bonds with Boundaries', '視聴者メモリー — 境界線のある絆'], ['Human + AI Live — Co-Stream Pilot', '人間 + AIライブ — 共同配信パイロット'], ['Natural Presence — Motion + Backchannels', '自然な存在感 — モーション + 相づち'], ['Governed Autopilot — Safer at Scale', '統制されたオートパイロット — 安全にスケール'],
     ['Headless browser-based Live2D recording — no GPU needed. Trigger expressions with emotion markers (*happy*, *surprised*), add TTS voice, background music, and auto-burn subtitles into the final MP4.', 'ヘッドレスブラウザでLive2Dを収録。GPUは不要です。感情マーカーで表情を切り替え、TTS音声・BGM・字幕を最終MP4へ自動で焼き込みます。'], ['Upload a song → separate vocals with Demucs → convert voice via RVC API → mix with FFmpeg → generate lip-sync data → render the final video. Karaoke creation and LRC/MusicXML notation supported.', '曲をアップロード → Demucsでボーカル分離 → RVC APIで声変換 → FFmpegでミックス → リップシンク生成 → 最終動画をレンダリング。カラオケ作成とLRC/MusicXMLにも対応。'], ['Run two characters on one stream with AI auto-banter, real-time Twitch & Kick chat, speech queuing, and an OBS browser source. NEW: live follow goals with fireworks, sprite girls greeting every follower, and a daily auto-stream window so the show runs while you\'re literally asleep uwu.', 'AI自動掛け合い、Twitch・Kickのリアルタイムチャット、発話キュー、OBSブラウザソースで2キャラクターをひとつの配信に。NEW：花火つきフォローゴール、フォロワーを出迎えるスプライトの女の子たち、寝ている間も配信が続く毎日の自動配信ウィンドウ、うゅ〜。'], ['Unified inbox for unanswered comments & mentions across YouTube, Instagram, and Twitter. AI drafts replies, tracks follower deltas per platform, and lets you mark interactions answered with one click.', 'YouTube、Instagram、Twitterの未返信コメントとメンションをひとつの受信トレイに集約。AI返信案、プラットフォーム別フォロワー増減、ワンクリック返信済み管理に対応。'], ['Log donations from YouTube, Twitch, and Fanbox. USD-normalized revenue comparison, monthly growth charts, currency mix, top supporter rankings, 3-month forecast with trend indicator, and CSV/JSON exports.', 'YouTube、Twitch、Fanboxの寄付を記録。USD換算の収益比較、月次成長グラフ、通貨内訳、支援者ランキング、3か月予測、CSV/JSON出力を利用できます。'], ['At 2 AM JST, Daily mode cooks tomorrow’s three Shorts plus three social posts for every connected platform. Buffer mode keeps a ready-to-publish stash so the calendar never looks abandoned.', 'JST午前2時に、Dailyモードが翌日のShorts 3本と接続済みプラットフォームごとのSNS投稿3本を作成。Bufferモードはすぐ公開できる在庫を保ち、カレンダーをさみしくさせません。'], ['Transcribe long footage, correct captions, generate chapters, detect spicy highlight moments, and turn a stream-sized monster into short-form clips with platform-ready packaging.', '長尺映像を文字起こしし、字幕を修正、チャプターを生成、見どころを検出。長い配信をプラットフォーム向け短尺クリップへ変換します。'], ['Send heavy renders to batch workers, track jobs, watch scheduler health and metrics, retry failed uploads with backoff, and ping Discord when a pipeline starts acting possessed.', '重いレンダリングをバッチワーカーへ送り、ジョブを追跡。スケジューラーの健全性とメトリクスを監視し、失敗したアップロードをバックオフ再試行、異常時はDiscordへ通知します。'],
     ['Paste a YouTube URL, choose an angle ("wholesome roast, playful analysis, hype commentary"), pick VTuber position (Bottom Left / Center / Right) and beats count — AI generates a timestamped script and records the video.', 'YouTube URLを貼り、切り口を選び、VTuber位置とビート数を設定。AIがタイムスタンプ付きの台本を生成し、動画を収録します。'], ['Generate character art via Stable Diffusion with full control: sampler, width/height, CFG scale, seed, batch sizes (1, 4, 10, 25, 50, 💯), HR upscaling, face restore, meme mode with top/bottom text, and auto emotion detection.', 'Stable Diffusionでキャラクターアートを生成。サンプラー、サイズ、CFG、シード、バッチ数、HRアップスケール、顔修復、上下テキストのミームモード、感情自動検出まで細かく調整できます。'], ['Auto-find the best frame with AI, apply styles (default / vibrant / dramatic / soft / neon), add text overlays, compare styles side-by-side, and batch generate for your entire queue at once.', 'AIが最高のフレームを自動検出。スタイル適用、文字オーバーレイ、横並び比較、キュー全体の一括生成に対応。'], ['Track YouTube Videos, Instagram Posts, Total Views, Total Likes, Total Comments, and Engagement Rate. See top 3 performing content by platform, monthly activity, best posting times, and top emojis.', 'YouTube動画、Instagram投稿、総視聴数、いいね、コメント、エンゲージメント率を追跡。プラットフォーム別トップ3、月間活動、最適投稿時間、人気絵文字を確認できます。'], ['Real-time SEO score (A/B/C/D grade), keywords found, hooks found, emojis found. AI generates viral titles with style presets, analyzes descriptions (word count, CTAs, timestamps, hashtags), and suggests keywords.', 'リアルタイムSEOスコア（A〜D）、キーワード・フック・絵文字を解析。AIがスタイル別にバイラルタイトルを作成し、説明文とキーワードも提案します。'], ['Filter by region (US, Japan, UK, Korea…) and niche (VTuber, Gaming, Anime, React, ASMR, Music). See rising queries, virality scores (High/Medium/Low), and one-click create content from any trending keyword.', '地域とジャンルで絞り込み。急上昇クエリ、バイラルスコア、トレンドキーワードからのワンクリックコンテンツ作成を利用できます。'], ['Create users, assign roles (Creator → Editor → Manager → Moderator → Admin), reset passwords, and configure CORS allowed origins. Rate-limited logins with Discord alerts after 3 failed attempts.', 'ユーザー作成、役割付与、パスワードリセット、CORS許可オリジン設定に対応。ログインはレート制限され、3回失敗するとDiscordへ通知します。'],
     ['Creator', 'クリエイター'], ['Editor', 'エディター'], ['Manager', 'マネージャー'], ['Moderator', 'モデレーター'], ['Admin', '管理者'], ['Web Framework', 'Webフレームワーク'], ['Primary Database', 'メインデータベース'], ['Cache + Sessions', 'キャッシュ + セッション'], ['Video Processing', '動画処理'], ['Vocal Separation', 'ボーカル分離'], ['Local LLM', 'ローカルLLM'], ['AI Generation', 'AI生成'], ['Headless Browser', 'ヘッドレスブラウザ'], ['Virality ML', 'バイラル予測ML'], ['Fast Event Loop', '高速イベントループ'], ['Job Scheduling', 'ジョブスケジューリング'], ['Observability', '可観測性'],
