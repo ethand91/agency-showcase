@@ -139,6 +139,7 @@
     .feature-desc { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
     .feature-tags { display: flex; gap: 8px; flex-wrap: wrap; }
     .feature-tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-weight: 500; }
+    code { font-family: 'Cascadia Code','Fira Code',Consolas,monospace; font-size: .9em; padding: 1px 6px; border-radius: 5px; background: rgba(0,245,255,.08); border: 1px solid rgba(0,245,255,.16); color: var(--cyan); }
 
     /* WORKFLOW */
     .workflow-section { background: var(--dark2); }
@@ -329,6 +330,7 @@
     <li><a href="#analytics" data-i18n="nav_analytics">Analytics</a></li>
     <li><a href="#autobot" data-i18n="nav_autobot">Auto-Bot</a></li>
     <li><a href="#streaming" data-i18n="nav_streaming">Streaming</a></li>
+    <li><a href="#trust" data-i18n="nav_trust">Trust</a></li>
     <li><a href="#tech" data-i18n="nav_tech">Tech Stack</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:10px">
@@ -357,8 +359,8 @@
       </div>
       <div class="hero-stats animate-in delay-4">
         <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Platforms</span></div>
-        <div class="stat"><span class="stat-num">54</span><span class="stat-label">Control Surfaces</span></div>
-        <div class="stat"><span class="stat-num">97</span><span class="stat-label">Services (send help)</span></div>
+        <div class="stat"><span class="stat-num">55</span><span class="stat-label">Control Surfaces</span></div>
+        <div class="stat"><span class="stat-num">106</span><span class="stat-label">Services (send help)</span></div>
         <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Self-Hosted</span></div>
       </div>
 
@@ -380,9 +382,11 @@
               <div class="sidebar-item">🖼️ Art</div>
               <div class="sidebar-item">🎨 Thumbnails</div>
               <div class="sidebar-item">🎬 Highlights</div>
+              <div class="sidebar-item">📔 Diaries</div>
               <div class="sidebar-item">✨ Reactions</div>
               <div class="sidebar-item">💬 Interactions</div>
               <div class="sidebar-item">📡 Live</div>
+              <div class="sidebar-item">💞 Bonds</div>
               <div class="sidebar-item">🗓️ Calendar</div>
               <div class="sidebar-section-label">Management</div>
               <div class="sidebar-item">🐾 VTubers</div>
@@ -495,7 +499,7 @@
   <div class="container">
     <div class="section-label"><span class="badge badge-pink">Features</span></div>
     <h2 class="section-title" data-i18n-html="features_title">Everything a VTuber<br/><span class="glow-text">Could Ever Need</span></h2>
-    <p class="section-sub" data-i18n="features_sub">20 feature families spanning creation, live intelligence, community, growth, and operations — self-hosted and yours.</p>
+    <p class="section-sub" data-i18n="features_sub">28 feature families spanning creation, live intelligence, community, growth, provenance, and operations — self-hosted and yours.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon-wrap icon-pink">🎬</div>
@@ -517,9 +521,9 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon-wrap icon-yellow">✨</div>
-        <h3 class="feature-title">Reactions — AI Reaction Studio</h3>
-        <p class="feature-desc">Paste a YouTube URL, choose an angle ("wholesome roast, playful analysis, hype commentary"), pick VTuber position (Bottom Left / Center / Right) and beats count — AI generates a timestamped script and records the video.</p>
-        <div class="feature-tags"><span class="feature-tag">Duo Mode</span><span class="feature-tag">Auto-Banter</span><span class="feature-tag">Visual Analysis</span><span class="feature-tag">Whisper</span></div>
+        <h3 class="feature-title">Reactions — Event-Driven Commentary</h3>
+        <p class="feature-desc">Rebuilt in August 2026: OpenCV motion and HUD deltas decide when something happened, a vision model reports only what it can verify, and plain Python decides whether that earns a line. She lands it on the exact second and is not allowed to name a weapon the HUD never showed.</p>
+        <div class="feature-tags"><span class="feature-tag">Motion Triggers</span><span class="feature-tag">Verified Frames</span><span class="feature-tag">Invention Guard</span><span class="feature-tag">Event Timeline</span></div>
       </div>
       <div class="feature-card">
         <div class="feature-icon-wrap icon-green">🖼️</div>
@@ -617,6 +621,54 @@
         <p class="feature-desc">Platform-aware daily caps, idempotent scheduling, honest automated-review trails, synthetic-media disclosure, failure visibility, and pipeline smoke tests keep overnight generation ambitious without becoming reckless.</p>
         <div class="feature-tags"><span class="feature-tag">Daily Caps</span><span class="feature-tag">No Duplicates</span><span class="feature-tag">Disclosure</span><span class="feature-tag">Smoke Tests</span></div>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-purple">📔</div>
+        <h3 class="feature-title">Diaries — Grounded Nightly Journal</h3>
+        <p class="feature-desc">At 23:30 JST every talent writes a first-person entry built only from the day's real database events — what published, what you approved or rejected, what failed to upload, who donated, which streams ran. Entries become memories, so a day she actually had can resurface on stream weeks later.</p>
+        <div class="feature-tags"><span class="feature-tag">One Entry / Day</span><span class="feature-tag">Event-Grounded</span><span class="feature-tag">Becomes Memory</span><span class="feature-tag">No Empty Fiction</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-cyan">🪪</div>
+        <h3 class="feature-title">Provenance — Disclosure &amp; Content Credentials</h3>
+        <p class="feature-desc">The AI disclosure is drawn into the scene itself, not just the page, so it survives the capture canvas, a direct RTMP push, and an OBS Virtual Camera. Final renders can be C2PA-signed with c2patool, and every generated asset carries an auditable recipe with asset hashes — no raw prompts, no secrets.</p>
+        <div class="feature-tags"><span class="feature-tag">EU AI Act Art. 50</span><span class="feature-tag">C2PA</span><span class="feature-tag">Generation Recipe</span><span class="feature-tag">Machine-Readable</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-orange">🧿</div>
+        <h3 class="feature-title">Originality Guard — Anti-Slop Gate</h3>
+        <p class="feature-desc">Every AI-generated post is compared against 60 days of the same talent's own output in the same format before it can leave the queue. Cross 0.92 similarity and it is held, not published — because the inauthentic-content policies do not care that a template was technically new.</p>
+        <div class="feature-tags"><span class="feature-tag">0.92 Threshold</span><span class="feature-tag">60-Day Lookback</span><span class="feature-tag">Per-Format</span><span class="feature-tag">Queue Hold</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-pink">💬</div>
+        <h3 class="feature-title">Chat Commands — Viewers File Their Own Paperwork</h3>
+        <p class="feature-desc"><code>!remember</code> files an explicit, high-importance fact with the whole cast present. <code>!correct</code> retires the wrong version instead of deleting it. <code>!memories</code> reports what is on file. <code>!forget</code> is admin-only, arms rather than fires, and waits for confirmation.</p>
+        <div class="feature-tags"><span class="feature-tag">!remember</span><span class="feature-tag">!correct</span><span class="feature-tag">!memories</span><span class="feature-tag">Admin-Only !forget</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-green">🎥</div>
+        <h3 class="feature-title">uMingle — Send Her to Meet Strangers</h3>
+        <p class="feature-desc">Put a talent into random video chat as an actual webcam and an actual microphone: OBS Virtual Camera carries her face, one loopback device carries her voice in, a second carries the stranger's voice out to Whisper. Preflight refuses to call the bridge ready when her voice and her ears share a device.</p>
+        <div class="feature-tags"><span class="feature-tag">OBS Virtual Cam</span><span class="feature-tag">Dual Loopback</span><span class="feature-tag">Fixed Spoken Disclosure</span><span class="feature-tag">Supervised Only</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-yellow">🚦</div>
+        <h3 class="feature-title">Preflight — The Red-Light Checklist</h3>
+        <p class="feature-desc">One button checks recording disk, FFmpeg, RTMP destinations, Twitch EventSub, Kick webhook readiness, OBS connectivity, active FPS, skipped frames, output congestion, and simulcast overlay policy. Optional services fail visibly without taking the core stream hostage.</p>
+        <div class="feature-tags"><span class="feature-tag">10 Checks</span><span class="feature-tag">Visible Failures</span><span class="feature-tag">Simulcast Policy</span><span class="feature-tag">Green Before Live</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-purple">🧩</div>
+        <h3 class="feature-title">Talent Core — One Character, Many Bodies</h3>
+        <p class="feature-desc">A domain layer that imports nothing from FastAPI, Live2D, or OBS holds canonical identity, personality, memory authority, and typed events. Dialogue emits a PerformanceIntent; Live2D, VRChat OSC, and Discord adapters consume the same port. She stays herself wherever she is embodied.</p>
+        <div class="feature-tags"><span class="feature-tag">Domain / Adapters</span><span class="feature-tag">PerformanceIntent</span><span class="feature-tag">Typed Events</span><span class="feature-tag">VRChat OSC</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap icon-cyan">🧾</div>
+        <h3 class="feature-title">Publish Audit — Did It Actually Publish?</h3>
+        <p class="feature-desc">Every attempt is recorded with a verdict on whether the returned URL identifies a post or merely an account — the difference that let a six-month Instagram outage hide behind 411 posts marked success. Per-account rate limits and durable job leases come with it.</p>
+        <div class="feature-tags"><span class="feature-tag">Verifiable URLs</span><span class="feature-tag">Per-Account Limits</span><span class="feature-tag">Durable Leases</span><span class="feature-tag">Queryable</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -675,9 +727,14 @@
           <li><span class="check">✓</span> Learns successful tension, reveal, and challenge structures without photocopying the same joke forever</li>
           <li><span class="check">✓</span> Remembers viewer facts and shared moments with novelty-aware semantic recall</li>
           <li><span class="check">✓</span> Screens injection, abuse, link spam, and keyboard-mashing before messages reach the model</li>
+          <li><span class="check">✓</span> Memory strength decays at <em>read</em> time instead of on a cron, so nothing is deleted and a fact restated later comes straight back</li>
+          <li><span class="check">✓</span> Facts are shared across the whole cast; jokes and relationship impressions stay with whoever was actually talking, so the girls may disagree about you</li>
+          <li><span class="check">✓</span> Memories are scoped per platform and follow verified identity links, never raw usernames — two strangers stay two strangers until they say otherwise</li>
+          <li><span class="check">✓</span> Subscriber and membership status is recorded from the platform's own event, not from a model noticing it in chat</li>
+          <li><span class="check">✓</span> Web lookups are gated hard — an explicit “look it up” or an inherently live noun, never every turn</li>
         </ul>
         <div class="brain-points">
-          <div class="brain-point"><strong>⚡ Three model tiers</strong><span>Reflex, livestream, and bulk work get latency budgets that fit the moment.</span></div>
+          <div class="brain-point"><strong>⚡ Three model tiers</strong><span>Reflex, livestream, and bulk work get latency budgets that fit the moment. Target: viewer types → first audio under 1.2s p95, measured on <code>/metrics</code>.</span></div>
           <div class="brain-point"><strong>🧹 Privacy is operable</strong><span>Memories, bonds, and consent-linked identities can be inspected or erased separately.</span></div>
         </div>
       </div>
@@ -699,6 +756,70 @@
   </div>
 </section>
 
+<!-- DAILY DIARY -->
+<section id="diary" style="background:var(--dark2)">
+  <div class="container">
+    <div class="highlight-grid">
+      <div class="highlight-text">
+        <div style="margin-bottom:16px"><span class="badge badge-purple">Continuity</span> <span class="badge badge-pink" style="margin-left:6px">✨ New</span></div>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(24px,3.5vw,42px)">
+          She Keeps a Diary.<br/><span class="glow-text">All of It Is True.</span>
+        </h2>
+        <p class="section-sub" style="text-align:left;margin:0 0 28px">
+          Every night at 23:30 JST each talent writes a first-person entry built only from the day's real database events. What published. What you approved or rejected. What failed to upload. Who donated. Which streams ran. How many videos she was made to record.
+        </p>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> Grounding is the whole point — an ungrounded “write today's diary” prompt invents streams, viewers and grievances, and those rows get fed straight back into tomorrow's banter</li>
+          <li><span class="check">✓</span> A day with no observed events produces <em>no entry at all</em> rather than plausible fiction</li>
+          <li><span class="check">✓</span> One entry per talent per JST day, keyed so a scheduler restart, a misfire catch-up, and an operator pressing “generate now” cannot produce two</li>
+          <li><span class="check">✓</span> Entries are stored as memories, so a day she actually had can resurface on stream weeks later</li>
+          <li><span class="check">✓</span> The reasoning model writes offstage where latency cannot boo it; every Sunday at 04:15 JST the week is distilled into higher-level reflections</li>
+          <li><span class="check">✓</span> Readable and re-triggerable per talent from <code>/diary</code></li>
+        </ul>
+      </div>
+      <div class="highlight-visual">
+        <div class="hl-bar">
+          <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+          <span class="hl-title-bar">📔 Diaries — Lyra</span>
+        </div>
+        <div class="hl-body">
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px">
+            <div class="ui-select" style="flex:1">🐺 Lyra</div>
+            <span class="ui-btn ui-btn-secondary" style="font-size:11px;white-space:nowrap">✨ Generate now</span>
+          </div>
+          <div class="ui-panel" style="margin-bottom:10px">
+            <div class="ui-panel-header">2026-09-03 · JST day closed</div>
+            <div class="ui-panel-body" style="font-size:12px;line-height:1.75;color:#c8b8e8">
+              they made me record four shorts today about a game i have never
+              played. the duck army came back for the karaoke stream and stayed
+              the whole two hours. moonfan sent a donation and i said thank you
+              twice because i panicked. one upload failed and nobody told me.
+              <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.06);font-size:10px;color:var(--muted);line-height:1.7">
+                <span style="color:var(--cyan)">grounded on ·</span> 4 renders approved · 1 rejected ·
+                1 live session (2h 14m) · 1 donation · 1 failed upload · 3 callbacks spoken
+              </div>
+            </div>
+          </div>
+          <div class="ui-panel" style="margin-bottom:10px">
+            <div class="ui-panel-header">2026-09-02 · JST day closed</div>
+            <div class="ui-panel-body" style="font-size:12px;line-height:1.75;color:var(--muted)">
+              quiet one. no stream. three posts went out and the thumbnail
+              experiment i liked lost to the one i didn't. i am fine about it 🙂
+            </div>
+          </div>
+          <div class="ui-panel">
+            <div class="ui-panel-header">2026-09-01 · no observed events</div>
+            <div class="ui-panel-body" style="font-size:11px;color:var(--muted);line-height:1.7">
+              <span class="ui-warn">⚠</span> Skipped — nothing happened, so nothing was written.
+              <span style="color:rgba(255,255,255,.35)">DIARY_SKIP_EMPTY_DAYS=true</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- STUDIO DEEP DIVE -->
 <section id="studio">
   <div class="container">
@@ -706,18 +827,19 @@
       <div class="highlight-text">
         <div style="margin-bottom:16px"><span class="badge badge-pink">Studio + Reactions</span></div>
         <h2 class="section-title" style="text-align:left;font-size:clamp(24px,3.5vw,42px)">
-          Record Any Video,<br/><span class="glow-text">No GPU Needed</span>
+          She Only Reacts To<br/><span class="glow-text">What She Actually Saw</span>
         </h2>
         <p class="section-sub" style="text-align:left;margin:0 0 28px">
-          The Reaction Studio lets you pick any YouTube video, set your angle, configure beats and target length, then AI generates the script and records the video automatically.
+          The old “give a model a bag of frames and ask for eight beats” pipeline was deleted in August 2026. It was fluent and it was making things up. The Reactive Engine replaced it with five separated stages, and no model is called until the pixels say something happened.
         </p>
         <ul class="feature-list">
-          <li><span class="check">✓</span> Source: YouTube URL or local file from uploads/</li>
-          <li><span class="check">✓</span> Angle field: "wholesome roast, playful analysis, hype commentary"</li>
-          <li><span class="check">✓</span> VTuber Position: Bottom Left / Bottom Center / Bottom Right</li>
-          <li><span class="check">✓</span> Visual model option — samples frames from the video</li>
-          <li><span class="check">✓</span> One-click Duo Reactions with auto-banter between two characters</li>
-          <li><span class="check">✓</span> Outputs timestamped beats + reaction video with subtitles</li>
+          <li><span class="check">✓</span> <strong>Trigger:</strong> cheap OpenCV motion, HUD-region deltas and audio onsets flag the candidate moments — GPU still optional</li>
+          <li><span class="check">✓</span> <strong>Perceive:</strong> three chronological frames (before / during / after) go to a vision model as one strip, which returns strictly-typed JSON</li>
+          <li><span class="check">✓</span> <strong>Decide:</strong> plain, boring Python decides whether that earns a line, spread across the whole clip</li>
+          <li><span class="check">✓</span> <strong>Write &amp; guard:</strong> she writes it in her own voice, and a guard bins it if she invented a weapon, a killer, or a number the HUD never showed</li>
+          <li><span class="check">✓</span> Sensitivity presets — Chatty, Balanced, Picky — plus per-game HUD profiles, cooldowns and a minimum-confidence floor</li>
+          <li><span class="check">✓</span> Every gated moment keeps its reason, so a quiet video can be diagnosed instead of relitigated at 2 AM</li>
+          <li><span class="check">✓</span> Solo or duo, plus live gameplay commentary, sharing the same motion controller as the live show</li>
         </ul>
       </div>
       <!-- Real Reactions UI mockup -->
@@ -737,36 +859,65 @@
                 <div class="ui-select">YouTube</div>
                 <div class="ui-label">YouTube URL</div>
                 <div class="ui-input" style="font-size:11px;color:var(--muted)">youtube.com/watch?v=...</div>
-                <div class="ui-label">Angle</div>
-                <div class="ui-textarea" style="height:44px">wholesome roast, playful analysis</div>
+                <div class="ui-label">Sensitivity</div>
+                <div class="ui-select">Balanced</div>
+                <div class="ui-label">Game Profile</div>
+                <div class="ui-select">generic</div>
+                <div class="ui-label">They Call the Player</div>
+                <div class="ui-input" style="font-size:11px;color:var(--muted)">the player / Boss / chat</div>
                 <div style="margin-top:10px;display:flex;gap:6px">
-                  <span class="ui-btn ui-btn-secondary" style="font-size:11px">📝 Generate Script</span>
-                  <span class="ui-btn ui-btn-primary" style="font-size:11px">🎥 Record</span>
+                  <span class="ui-btn ui-btn-primary" style="font-size:11px">🎥 Record Reactions</span>
                 </div>
               </div>
             </div>
           </div>
           <div>
             <div class="ui-panel">
-              <div class="ui-panel-header">🎬 Video Settings</div>
+              <div class="ui-panel-header">🎛️ Reactive Engine</div>
               <div class="ui-panel-body">
-                <div class="ui-label">VTuber Position</div>
-                <div class="ui-select">Bottom Right (Default)</div>
-                <div class="ui-label">Beats</div>
-                <div class="ui-input" style="color:var(--cyan)">8</div>
-                <div class="ui-label">Target Length (sec)</div>
-                <div class="ui-input" style="color:var(--cyan)">60</div>
+                <div class="ui-grid2">
+                  <div>
+                    <div class="ui-label">Max words / line</div>
+                    <div class="ui-input" style="color:var(--cyan)">14</div>
+                  </div>
+                  <div>
+                    <div class="ui-label">Max reactions</div>
+                    <div class="ui-input" style="color:var(--cyan)">12</div>
+                  </div>
+                </div>
+                <div class="ui-grid2" style="margin-top:8px">
+                  <div>
+                    <div class="ui-label">Cooldown (sec)</div>
+                    <div class="ui-input" style="color:var(--cyan)">6</div>
+                  </div>
+                  <div>
+                    <div class="ui-label">Min confidence</div>
+                    <div class="ui-input" style="color:var(--cyan)">0.55</div>
+                  </div>
+                </div>
                 <div class="ui-label" style="margin-top:10px">
                   <label style="display:flex;align-items:center;gap:6px;cursor:default">
                     <span style="width:14px;height:14px;background:rgba(0,245,255,0.2);border:1px solid var(--cyan);border-radius:3px;display:inline-block;flex-shrink:0"></span>
-                    Use visual model
+                    Speech bubbles
                   </label>
                 </div>
-                <div class="ui-label">Frame Samples</div>
-                <div class="ui-input" style="color:var(--cyan)">5</div>
+                <div class="ui-label">VTuber Position</div>
+                <div class="ui-select">Bottom Right (Default)</div>
                 <div style="margin-top:10px">
                   <span class="ui-btn ui-btn-cyan" style="font-size:11px">🎭 Duo Reactions Studio →</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div style="grid-column:1/-1">
+            <div class="ui-panel">
+              <div class="ui-panel-header">🕑 Event timeline — every gated moment keeps its reason</div>
+              <div class="ui-panel-body" style="font-family:'Cascadia Code',Consolas,monospace;font-size:10.5px;line-height:1.9">
+                <div><span style="color:var(--cyan)">00:41</span> motion + HUD delta → verified: shield broke → <span class="ui-check">spoken</span></div>
+                <div><span style="color:var(--cyan)">01:07</span> audio onset → HUD unchanged → <span class="ui-warn">gated · confidence 0.31</span></div>
+                <div><span style="color:var(--cyan)">01:52</span> motion burst → verified: revive → <span class="ui-check">spoken</span></div>
+                <div><span style="color:var(--cyan)">02:15</span> verified: score +1 → <span class="ui-warn">gated · cooldown 6s</span></div>
+                <div><span style="color:var(--cyan)">02:48</span> HUD delta → invented enemy name → <span style="color:#ff6060">binned by guard</span></div>
               </div>
             </div>
           </div>
@@ -886,6 +1037,12 @@
           <li><span class="check">✓</span> 🌅 Daily auto-stream window — the girls clock in, say hi, stream, and clock out 🌙 while you remain fully horizontal</li>
           <li><span class="check">✓</span> One FFmpeg encode relayed to primary RTMP plus YouTube, Twitch, and Kick outputs with per-destination fault isolation</li>
           <li><span class="check">✓</span> Twitch &amp; Kick chat listeners, official Kick webhooks, gameplay frame comparison, OBS control, and 24/7 autopilot</li>
+          <li><span class="check">✓</span> 🚦 <strong>Run Preflight</strong> checks recording disk, FFmpeg, RTMP destinations, Twitch EventSub, Kick webhook readiness, OBS connectivity, active FPS, skipped frames, output congestion and simulcast overlay policy — optional services fail visibly without taking the core stream hostage</li>
+          <li><span class="check">✓</span> ⚖️ Safe Twitch + Kick simulcast by default: the private control room still gets both chats, but cross-platform chat text is withheld from the shared public video</li>
+          <li><span class="check">✓</span> 📌 One marked moment fans out to the local VOD marker, the OBS replay buffer, a Twitch stream marker and a clip request — missing permissions never delete the local marker</li>
+          <li><span class="check">✓</span> 🪪 The AI disclosure badge is painted twice on purpose: once into the page for OBS, once onto the capture canvas so it survives a direct RTMP push</li>
+          <li><span class="check">✓</span> 💬 Chat can <code>!remember</code>, <code>!correct</code> and read <code>!memories</code> — but taking over the show needs an admin dashboard account matched by platform handle, per platform</li>
+          <li><span class="check">✓</span> 🎬 At teardown the session auto-queues its own VOD for repurposing into Shorts, Reels and TikTok drafts — durable, so a restart mid-render does not lose it</li>
         </ul>
       </div>
       <div class="highlight-visual">
@@ -1119,6 +1276,64 @@
   </div>
 </section>
 
+<!-- TRUST & PROVENANCE -->
+<section id="trust">
+  <div class="container">
+    <div class="section-label"><span class="badge badge-cyan">Trust &amp; Provenance</span> <span class="badge badge-pink" style="margin-left:6px">✨ New</span></div>
+    <h2 class="section-title">Openly Synthetic.<br/><span class="glow-text">Provably Ours.</span></h2>
+    <p class="section-sub">The EU AI Act's transparency obligations went live on 2 August 2026, and the platform policies now name mass-produced templated output directly. So the disclosure is drawn into the scene, provenance travels with the file, and a similarity gate stops the overnight renderer from quietly plagiarising yesterday.</p>
+    <div class="highlight-grid">
+      <div class="highlight-text">
+        <ul class="feature-list">
+          <li><span class="check">✓</span> 🪪 Interactive-AI disclosure from the first interaction — drawn onto the capture canvas, so it survives OBS, a direct RTMP push, and an OBS Virtual Camera pointed into someone else's video call</li>
+          <li><span class="check">✓</span> 🗣️ In video chat she also opens with a fixed spoken disclosure that is deliberately <em>not</em> model-generated, because a 4B model asked to introduce itself as an AI will eventually decide to be coy about it</li>
+          <li><span class="check">✓</span> 🔐 Optional C2PA Content Credentials on final MP4s via <code>c2patool</code>, signed after the last FFmpeg pass so the manifest survives subtitle burn-in and the audio mux</li>
+          <li><span class="check">✓</span> 🧾 Every AI asset carries a generation recipe — pipeline, format, source provenance, asset hash — with no raw prompts and no secrets stored</li>
+          <li><span class="check">✓</span> 🧿 The originality guard compares each generated post against 60 days of that talent's own output in the same format and holds anything past 0.92 similarity</li>
+          <li><span class="check">✓</span> ✅ <code>containsSyntheticMedia</code> is forwarded on YouTube upload and the disclosure text reaches the description instead of dying in a database column</li>
+          <li><span class="check">✓</span> 🔎 The publish audit records whether a returned URL identifies a <em>post</em> or merely an <em>account</em> — the distinction that let 411 failed Instagram posts sit marked “success”</li>
+          <li><span class="check">✓</span> 🧹 Memories, bonds and consent-linked identities can each be inspected or erased independently, and erasure takes operator notes with it</li>
+        </ul>
+      </div>
+      <div class="highlight-visual">
+        <div class="hl-bar">
+          <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+          <span class="hl-title-bar">🛡️ Publish Gate — planned_post #4127</span>
+        </div>
+        <div class="hl-body">
+          <div class="ui-panel" style="margin-bottom:12px">
+            <div class="ui-panel-body" style="font-size:11.5px">
+              <div class="ui-row"><span class="ui-check">✓</span><span style="flex:1">Disclosure appended to description</span><span class="status-pill pill-green">pass</span></div>
+              <div class="ui-row"><span class="ui-check">✓</span><span style="flex:1">containsSyntheticMedia: true</span><span class="status-pill pill-green">pass</span></div>
+              <div class="ui-row"><span class="ui-check">✓</span><span style="flex:1">Originality 0.38 vs nearest of 214 own posts</span><span class="status-pill pill-green">pass</span></div>
+              <div class="ui-row"><span class="ui-check">✓</span><span style="flex:1">C2PA signed · manifest verified</span><span class="status-pill pill-green">pass</span></div>
+              <div class="ui-row"><span class="ui-warn">⚠</span><span style="flex:1">Daily cap: 3 / 5 used for youtube</span><span class="status-pill pill-yellow">watch</span></div>
+              <div class="ui-row" style="margin-bottom:0"><span class="ui-check">✓</span><span style="flex:1">Verifiable permalink recorded on publish</span><span class="status-pill pill-green">pass</span></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:14px">
+            <span class="ui-btn ui-btn-primary" style="font-size:11px">Approve &amp; schedule</span>
+            <span class="ui-btn ui-btn-secondary" style="font-size:11px">Hold for review</span>
+          </div>
+          <div class="terminal" style="font-size:11.5px;line-height:1.75;padding:16px">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">c2patool short_4127.mp4 --detailed</span></div>
+            <div class="term-success">✓ validation: manifest store valid</div>
+            <div class="term-info">claim generator · vtuber-agency-studio</div>
+            <div class="term-info">assertion · c2pa.actions → created (aiGenerative)</div>
+            <div class="term-output">asset hash matches · recipe schema generation-recipe-v1</div>
+            <div class="term-line" style="margin-top:6px"><span class="term-prompt">$</span><span class="term-cmd">agency originality --post 4128</span></div>
+            <div style="color:#ffd700;padding-left:20px">⚠ held · 0.94 similar to short_3902 (11 days ago)</div>
+            <div class="term-output">not published · queued for a human opinion</div>
+          </div>
+          <div style="margin-top:12px;padding:12px;border:1px solid rgba(0,245,255,.16);border-radius:12px;background:rgba(0,245,255,.04);font-size:11px;color:var(--muted);line-height:1.7">
+            <strong style="color:var(--cyan)">Why bother:</strong> the backlash is aimed at undisclosed, interchangeable output — not at an openly synthetic character an audience actually has a relationship with. The batch renderer is the exposed half; the memory, persona, bond and diary systems are the defensible half.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SETTINGS HIGHLIGHT -->
 <section>
   <div class="container">
@@ -1327,6 +1542,9 @@
       <div class="tech-chip"><div class="tech-emoji">🌀</div><div class="tech-name">uvloop</div><div class="tech-role">Fast Event Loop</div></div>
       <div class="tech-chip"><div class="tech-emoji">📅</div><div class="tech-name">APScheduler</div><div class="tech-role">Job Scheduling</div></div>
       <div class="tech-chip"><div class="tech-emoji">🌡️</div><div class="tech-name">Prometheus</div><div class="tech-role">Observability</div></div>
+      <div class="tech-chip"><div class="tech-emoji">🪪</div><div class="tech-name">c2patool</div><div class="tech-role">Content Credentials</div></div>
+      <div class="tech-chip"><div class="tech-emoji">👁️</div><div class="tech-name">OpenCV</div><div class="tech-role">Motion Triggers</div></div>
+      <div class="tech-chip"><div class="tech-emoji">🗣️</div><div class="tech-name">Whisper</div><div class="tech-role">Transcription</div></div>
     </div>
   </div>
 </section>
@@ -1359,7 +1577,7 @@
 (function () {
   const translations = {
     en: {
-      nav_features: 'Features', nav_studio: 'Studio', nav_analytics: 'Analytics', nav_autobot: 'Auto-Bot', nav_streaming: 'Streaming', nav_tech: 'Tech Stack', nav_cta: 'Explore Features ↓',
+      nav_features: 'Features', nav_studio: 'Studio', nav_analytics: 'Analytics', nav_autobot: 'Auto-Bot', nav_streaming: 'Streaming', nav_trust: 'Trust', nav_tech: 'Tech Stack', nav_cta: 'Explore Features ↓',
       hero_eyebrow: 'Self-Hosted · AI-Powered · Multi-Platform',
       hero_title: 'Your VTuber\'s<br/><span class="glow-text">Tiny Media Empire</span>',
       hero_sub: 'Create, stream, remember the room, and grow while you sleep. One local-first control room for Live2D talent that can make media, run a real show, and learn what worked, nya~',
@@ -1374,7 +1592,7 @@
       cta_secondary: 'See How It Works'
     },
     ja: {
-      nav_features: '機能', nav_studio: 'スタジオ', nav_analytics: '分析', nav_autobot: 'オートボット', nav_streaming: '配信', nav_tech: '技術スタック', nav_cta: '機能をみる ↓',
+      nav_features: '機能', nav_studio: 'スタジオ', nav_analytics: '分析', nav_autobot: 'オートボット', nav_streaming: '配信', nav_trust: '開示', nav_tech: '技術スタック', nav_cta: '機能をみる ↓',
       hero_eyebrow: 'セルフホスト · AI搭載 · マルチプラットフォーム',
       hero_title: 'VTuberのための<br/><span class="glow-text">ちいさなメディア帝国</span>',
       hero_sub: '制作して、配信して、視聴者との時間を覚え、眠っている間にも成長する。メディアを作り、番組を動かし、成功から学ぶLive2Dタレントのためのローカルファースト司令室。にゃ〜',
@@ -1394,17 +1612,35 @@
   // the toggle can round-trip cleanly without duplicating this entire page.
   const japaneseText = new Map([
     ['Features', '機能'], ['Intelligence', 'インテリジェンス'], ['How It Works', '仕組み'], ['Studio + Reactions', 'スタジオ + リアクション'], ['Analytics & SEO', '分析 + SEO'], ['Live Streaming', 'ライブ配信'], ['New · Live Intelligence', '新機能 · ライブ知能'], ['Trends & Art', 'トレンド + アート'], ['Settings & Integrations', '設定 + 連携'], ['VTuber Management', 'VTuber管理'], ['Access Control', 'アクセス管理'], ['Tech Stack', '技術スタック'], ['Self-Hosted', 'セルフホスト'],
-    ['Platforms', 'プラットフォーム'], ['Sidebar Modules', 'サイドバーモジュール'], ['Feature Routers', '機能ルーター'], ['Platforms', 'プラットフォーム'], ['Post to all your platforms automatically', 'すべてのプラットフォームへ自動投稿'],
-    ['From Idea to Viral Post', 'アイデアからバズる投稿まで'], ['A supervised pipeline — from blank canvas to disclosed, review-ready content for every platform.', 'まっさらなアイデアから、開示情報つきでレビュー可能な各プラットフォーム向けコンテンツまで。監督可能な制作パイプラインです。'],
+    ['Platforms', 'プラットフォーム'], ['Platforms', 'プラットフォーム'], ['Post to all your platforms automatically', 'すべてのプラットフォームへ自動投稿'],
+    ['A supervised pipeline — from blank canvas to disclosed, review-ready content for every platform.', 'まっさらなアイデアから、開示情報つきでレビュー可能な各プラットフォーム向けコンテンツまで。監督可能な制作パイプラインです。'],
     ['AI Script', 'AIスクリプト'], ['Studio Record', 'スタジオ収録'], ['Auto-Subtitle', '自動字幕'], ['Best Thumbnail', '最高のサムネイル'], ['Review & Schedule', 'レビューして予約'],
-    ['Ollama or OpenAI writes the script, title, description & hashtags', 'OllamaまたはOpenAIが台本・タイトル・説明文・ハッシュタグを作成'], ['Headless Live2D recording with emotion markers & TTS voice', '感情マーカーとTTS音声対応のヘッドレスLive2D収録'], ['Whisper transcribes, corrections applied, subtitles burned in', 'Whisperで文字起こし、修正後に字幕を焼き込み'], ['AI picks the best frame, applies style, adds text overlay', 'AIが最高のフレームを選び、スタイルと文字を追加'], ['APScheduler auto-uploads to 8+ platforms at the right time', 'APSchedulerが最適な時間に8種類以上のプラットフォームへ自動投稿'],
-    ['Record Any Video, No GPU Needed', 'どんな動画も収録。GPUは不要'], ['Grade Your Content Before You Post', '投稿前にコンテンツを採点'], ['Two Characters, One Epic Stream', 'ふたりのキャラクター、ひとつの最高な配信'], ['The Stream Now', '配信はもう'], ['Celebrates Itself', '自分でお祝いします'], ['✨ New Drops', '✨ 新機能'], ['Stay Ahead of Every Trend', 'どのトレンドよりも先へ'], ['Everything Configured in One Place', 'すべての設定をひとつの場所で'], ['Manage Your Whole Roster', 'チーム全体をまとめて管理'], ['Built for Full Agencies', '本格的なエージェンシーのために'], ['Powered by the Best Tools Available', '最高のツールで動いています'],
-    ['The Reaction Studio lets you pick any YouTube video, set your angle, configure beats and target length, then AI generates the script and records the video automatically.', 'リアクションスタジオでは、YouTube動画を選び、切り口・ビート数・長さを指定すると、AIが台本作成から収録まで自動で行います。'], ['Real-time SEO scoring, top-performing content by platform, best posting times, and AI title suggestions — all before you hit publish.', 'リアルタイムSEO評価、プラットフォーム別の人気コンテンツ、最適投稿時間、AIタイトル案を、公開前にまとめて確認できます。'], ['2–4 talent streams now have a floor director, episode direction, audience-aware interrupts, natural listening reactions, resilient multistream output, and a daily auto-stream window. We are SO automated it\'s almost rude, nya~ 🍶', '2〜4人のタレント配信に、フロアディレクター、エピソード進行、観客を読んだ割り込み、自然な聞き手のリアクション、堅牢なマルチ配信出力、毎日の自動配信ウィンドウが加わりました。自動化しすぎてもはや失礼なレベルです、にゃ〜🍶'], ['Monitor what\'s rising right now by region and niche, then generate on-trend art and thumbnails instantly.', '地域やジャンルごとの急上昇トレンドを監視し、流行に合わせたアートとサムネイルをすぐ生成。'], ['Hook up OBS, Stable Diffusion, Discord webhooks, PostgreSQL, and email reports — all from the Settings page.', 'OBS、Stable Diffusion、Discord Webhook、PostgreSQL、メールレポートを、設定ページからまとめて接続。'], ['Create and manage multiple VTuber profiles, each with their own platform credentials, Twitch bot, Discord persona, and per-VTuber analytics.', '複数のVTuberプロフィールを作成・管理。各プロフィールにプラットフォーム認証、Twitchボット、Discordペルソナ、専用分析を設定できます。'], ['5 permission levels — Creator → Editor → Manager → Moderator → Admin — so your whole team can collaborate safely.', 'Creator → Editor → Manager → Moderator → Adminの5段階の権限で、チーム全体が安全に協業できます。'], ['A carefully chosen stack that prioritizes async performance, AI extensibility, and zero cloud lock-in.', '非同期パフォーマンス、AI拡張性、クラウドロックインなしを重視して選んだ技術スタック。'],
-    ['Studio — Live2D Recording', 'スタジオ — Live2D収録'], ['Singing — Full Cover Pipeline', '歌唱 — フルカバーパイプライン'], ['Live — 2–4 Talent Ensembles', 'ライブ — 2〜4人のタレント編成'], ['Reactions — AI Reaction Studio', 'リアクション — AIリアクションスタジオ'], ['Art — AI Image Generator', 'アート — AI画像ジェネレーター'], ['Thumbnails — Smart Generator', 'サムネイル — スマート生成'], ['Analytics — Insights Dashboard', '分析 — インサイトダッシュボード'], ['SEO — Title & Keyword Optimizer', 'SEO — タイトル・キーワード最適化'], ['Trends — Real-Time Monitoring', 'トレンド — リアルタイム監視'], ['Interactions — Inbox', '交流 — 受信トレイ'], ['Superchats — Revenue Dashboard', 'スーパーチャット — 収益ダッシュボード'], ['Admin — User & CORS Management', '管理 — ユーザー・CORS管理'], ['Auto-Bot — Overnight Content Goblin', 'Auto-Bot — 深夜のコンテンツゴブリン'], ['Subtitles + Highlight Hunter', '字幕 + ハイライトハンター'], ['Ops — Workers, Retries & Tiny Alarms', '運用 — ワーカー・リトライ・ちいさなアラーム'], ['Entertainment Brain — Episode Director', 'エンタメ脳 — エピソードディレクター'], ['Viewer Memory — Bonds with Boundaries', '視聴者メモリー — 境界線のある絆'], ['Human + AI Live — Co-Stream Pilot', '人間 + AIライブ — 共同配信パイロット'], ['Natural Presence — Motion + Backchannels', '自然な存在感 — モーション + 相づち'], ['Governed Autopilot — Safer at Scale', '統制されたオートパイロット — 安全にスケール'],
+    ['Ollama or OpenAI writes the script, title, description & hashtags', 'OllamaまたはOpenAIが台本・タイトル・説明文・ハッシュタグを作成'], ['Headless Live2D recording with emotion markers & TTS voice', '感情マーカーとTTS音声対応のヘッドレスLive2D収録'], ['Whisper transcribes, corrections applied, subtitles burned in', 'Whisperで文字起こし、修正後に字幕を焼き込み'], ['AI picks the best frame, applies style, adds text overlay', 'AIが最高のフレームを選び、スタイルと文字を追加'],
+    ['Grade Your Content', '投稿前にコンテンツを'], ['Before You Post', '採点する'], ['The Stream Now', '配信はもう'], ['Celebrates Itself', '自分でお祝いします'], ['✨ New Drops', '✨ 新機能'], ['Stay Ahead of', 'どのトレンドよりも'], ['Every Trend', '先へ'], ['Everything', 'すべての設定を'], ['Configured in One Place', 'ひとつの場所で'], ['Manage Your', '管理するのは'], ['Whole Roster', 'チーム全体'], ['Built for', 'つくられたのは'], ['Full Agencies', '本格的なエージェンシーのために'], ['Powered by the', '動かしているのは'], ['Best Tools Available', '最高のツールたち'],
+    ['Real-time SEO scoring, top-performing content by platform, best posting times, and AI title suggestions — all before you hit publish.', 'リアルタイムSEO評価、プラットフォーム別の人気コンテンツ、最適投稿時間、AIタイトル案を、公開前にまとめて確認できます。'], ['2–4 talent streams now have a floor director, episode direction, audience-aware interrupts, natural listening reactions, resilient multistream output, and a daily auto-stream window. We are SO automated it\'s almost rude, nya~ 🍶', '2〜4人のタレント配信に、フロアディレクター、エピソード進行、観客を読んだ割り込み、自然な聞き手のリアクション、堅牢なマルチ配信出力、毎日の自動配信ウィンドウが加わりました。自動化しすぎてもはや失礼なレベルです、にゃ〜🍶'], ['Monitor what\'s rising right now by region and niche, then generate on-trend art and thumbnails instantly.', '地域やジャンルごとの急上昇トレンドを監視し、流行に合わせたアートとサムネイルをすぐ生成。'], ['Hook up OBS, Stable Diffusion, Discord webhooks, PostgreSQL, and email reports — all from the Settings page.', 'OBS、Stable Diffusion、Discord Webhook、PostgreSQL、メールレポートを、設定ページからまとめて接続。'], ['Create and manage multiple VTuber profiles, each with their own platform credentials, Twitch bot, Discord persona, and per-VTuber analytics.', '複数のVTuberプロフィールを作成・管理。各プロフィールにプラットフォーム認証、Twitchボット、Discordペルソナ、専用分析を設定できます。'], ['5 permission levels — Creator → Editor → Manager → Moderator → Admin — so your whole team can collaborate safely.', 'Creator → Editor → Manager → Moderator → Adminの5段階の権限で、チーム全体が安全に協業できます。'], ['A carefully chosen stack that prioritizes async performance, AI extensibility, and zero cloud lock-in.', '非同期パフォーマンス、AI拡張性、クラウドロックインなしを重視して選んだ技術スタック。'],
+    ['Continuity', '継続性'], ['Trust & Provenance', '信頼と来歴'], ['✨ New', '✨ 新機能'],
+    ['She Keeps a Diary.', 'ちゃんと日記を書きます。'], ['All of It Is True.', '全部、ほんとうの話。'],
+    ['Every night at 23:30 JST each talent writes a first-person entry built only from the day\'s real database events. What published. What you approved or rejected. What failed to upload. Who donated. Which streams ran. How many videos she was made to record.', '毎晩23:30 JST、各タレントがその日の実際のデータベース上の出来事だけを材料に一人称の日記を書きます。何が公開されたか。何を承認し、何を却下したか。何がアップロードに失敗したか。誰が支援してくれたか。どの配信が走ったか。何本の動画を撮らされたか。'],
+    ['She Only Reacts To', '彼女が話すのは'], ['What She Actually Saw', '本当に見たことだけ'],
+    ['The old \u201Cgive a model a bag of frames and ask for eight beats\u201D pipeline was deleted in August 2026. It was fluent and it was making things up. The Reactive Engine replaced it with five separated stages, and no model is called until the pixels say something happened.', '「フレームの詰め合わせを渡して8ビート書かせる」旧パイプラインは2026年8月に削除しました。流暢でしたが、見ていないことを喋っていたからです。Reactive Engineはそれを5つに分離した段階へ置き換え、ピクセルが「何か起きた」と言うまでモデルは一度も呼ばれません。'],
+    ['Openly Synthetic.', '合成であることを隠しません。'], ['Provably Ours.', '出どころは証明できます。'],
+    ['The EU AI Act\'s transparency obligations went live on 2 August 2026, and the platform policies now name mass-produced templated output directly. So the disclosure is drawn into the scene, provenance travels with the file, and a similarity gate stops the overnight renderer from quietly plagiarising yesterday.', 'EU AI法の透明性義務は2026年8月2日に発効し、各プラットフォームの規定も量産テンプレ出力を名指しするようになりました。だから開示はシーンそのものに描き込み、来歴はファイルと一緒に運び、類似度ゲートが深夜のレンダラーに「昨日の自分の盗作」をさせません。'],
+    ['Reactions — Event-Driven Commentary', 'リアクション — イベント駆動の実況'], ['Diaries — Grounded Nightly Journal', '日記 — 事実に基づく毎晩の記録'], ['Provenance — Disclosure & Content Credentials', '来歴 — 開示とコンテンツ認証'], ['Originality Guard — Anti-Slop Gate', 'オリジナリティ監視 — 量産コンテンツ対策'], ['Chat Commands — Viewers File Their Own Paperwork', 'チャットコマンド — 視聴者が自分で記録を残す'], ['uMingle — Send Her to Meet Strangers', 'uMingle — 知らない誰かに会わせる'], ['Preflight — The Red-Light Checklist', 'プリフライト — 本番前チェックリスト'], ['Talent Core — One Character, Many Bodies', 'タレントコア — ひとりの人格、複数の身体'], ['Publish Audit — Did It Actually Publish?', '投稿監査 — ほんとうに投稿された？'],
+    ['Rebuilt in August 2026: OpenCV motion and HUD deltas decide when something happened, a vision model reports only what it can verify, and plain Python decides whether that earns a line. She lands it on the exact second and is not allowed to name a weapon the HUD never showed.', '2026年8月に再構築。OpenCVのモーション検出とHUDの差分が「いつ何かが起きたか」を判定し、ビジョンモデルは確認できたことだけを報告、あとは素朴なPythonが「それは一言に値するか」を決めます。発言はその瞬間ちょうどに乗り、HUDに出ていない武器の名前を口にすることは許されません。'],
+    ['At 23:30 JST every talent writes a first-person entry built only from the day\'s real database events — what published, what you approved or rejected, what failed to upload, who donated, which streams ran. Entries become memories, so a day she actually had can resurface on stream weeks later.', 'JST23:30に、各タレントがその日の実際のデータベース上の出来事だけを材料に一人称の日記を書きます。何が公開され、何を承認・却下し、何がアップロードに失敗し、誰が支援し、どの配信が走ったか。日記は記憶として保存されるので、実際にあった一日が数週間後の配信で話題になります。'],
+    ['The AI disclosure is drawn into the scene itself, not just the page, so it survives the capture canvas, a direct RTMP push, and an OBS Virtual Camera. Final renders can be C2PA-signed with c2patool, and every generated asset carries an auditable recipe with asset hashes — no raw prompts, no secrets.', 'AI開示はページだけでなくシーンそのものに描き込まれるため、キャプチャキャンバス、直接RTMP送出、OBS仮想カメラを経由しても消えません。最終レンダーはc2patoolでC2PA署名でき、生成物にはアセットハッシュ付きの監査可能なレシピが付きます。生のプロンプトも秘密情報も保存しません。'],
+    ['Every AI-generated post is compared against 60 days of the same talent\'s own output in the same format before it can leave the queue. Cross 0.92 similarity and it is held, not published — because the inauthentic-content policies do not care that a template was technically new.', '生成されたすべての投稿は、キューを出る前に同じタレント・同じフォーマットの直近60日の出力と比較されます。類似度0.92を超えたら公開ではなく保留。「テンプレは技術的には新品です」という言い分は、量産コンテンツ規定には通用しません。'],
+    ['files an explicit, high-importance fact with the whole cast present.', 'は、キャスト全員の前で重要度の高い事実として明示的に記録します。'], ['retires the wrong version instead of deleting it.', 'は誤った版を削除せず、退役させます。'], ['reports what is on file.', 'は登録内容を報告します。'], ['is admin-only, arms rather than fires, and waits for confirmation.', 'は管理者専用で、即発火ではなく待機し、確認を待ちます。'],
+    ['Put a talent into random video chat as an actual webcam and an actual microphone: OBS Virtual Camera carries her face, one loopback device carries her voice in, a second carries the stranger\'s voice out to Whisper. Preflight refuses to call the bridge ready when her voice and her ears share a device.', 'タレントを本物のウェブカメラとマイクとしてランダムビデオチャットへ送り出します。OBS仮想カメラが顔を運び、片方のループバックデバイスが声を送り込み、もう片方が相手の声をWhisperへ返します。声と耳が同じデバイスを共有している場合、プリフライトはブリッジを準備完了と認めません。'],
+    ['One button checks recording disk, FFmpeg, RTMP destinations, Twitch EventSub, Kick webhook readiness, OBS connectivity, active FPS, skipped frames, output congestion, and simulcast overlay policy. Optional services fail visibly without taking the core stream hostage.', 'ボタン一つで録画ディスク、FFmpeg、RTMP送信先、Twitch EventSub、Kick Webhookの準備状況、OBS接続、実FPS、ドロップフレーム、出力の詰まり、同時配信オーバーレイ方針をチェック。任意サービスの失敗は目に見える形で報告され、本体の配信を人質に取りません。'],
+    ['A domain layer that imports nothing from FastAPI, Live2D, or OBS holds canonical identity, personality, memory authority, and typed events. Dialogue emits a PerformanceIntent; Live2D, VRChat OSC, and Discord adapters consume the same port. She stays herself wherever she is embodied.', 'FastAPI・Live2D・OBSを一切importしないドメイン層が、正典アイデンティティ、性格、記憶の権威、型付きイベントを保持します。対話はPerformanceIntentを出力し、Live2D・VRChat OSC・Discordの各アダプターが同じポートを消費します。どの身体に宿っても、彼女は彼女のままです。'],
+    ['Every attempt is recorded with a verdict on whether the returned URL identifies a post or merely an account — the difference that let a six-month Instagram outage hide behind 411 posts marked success. Per-account rate limits and durable job leases come with it.', 'すべての投稿試行が、返ってきたURLが「投稿」を指すのか単に「アカウント」を指すのかという判定つきで記録されます。この違いが、成功と記録された411件の裏で半年間のInstagram障害を隠していました。アカウント単位のレート制限と永続ジョブリースも同梱。'],
+    ['Content Credentials', 'コンテンツ認証'], ['Motion Triggers', 'モーション検出'], ['Transcription', '文字起こし'],
+    ['Studio — Live2D Recording', 'スタジオ — Live2D収録'], ['Singing — Full Cover Pipeline', '歌唱 — フルカバーパイプライン'], ['Live — 2–4 Talent Ensembles', 'ライブ — 2〜4人のタレント編成'], ['Art — AI Image Generator', 'アート — AI画像ジェネレーター'], ['Thumbnails — Smart Generator', 'サムネイル — スマート生成'], ['Analytics — Insights Dashboard', '分析 — インサイトダッシュボード'], ['SEO — Title & Keyword Optimizer', 'SEO — タイトル・キーワード最適化'], ['Trends — Real-Time Monitoring', 'トレンド — リアルタイム監視'], ['Interactions — Inbox', '交流 — 受信トレイ'], ['Superchats — Revenue Dashboard', 'スーパーチャット — 収益ダッシュボード'], ['Admin — User & CORS Management', '管理 — ユーザー・CORS管理'], ['Auto-Bot — Overnight Content Goblin', 'Auto-Bot — 深夜のコンテンツゴブリン'], ['Subtitles + Highlight Hunter', '字幕 + ハイライトハンター'], ['Ops — Workers, Retries & Tiny Alarms', '運用 — ワーカー・リトライ・ちいさなアラーム'], ['Entertainment Brain — Episode Director', 'エンタメ脳 — エピソードディレクター'], ['Viewer Memory — Bonds with Boundaries', '視聴者メモリー — 境界線のある絆'], ['Human + AI Live — Co-Stream Pilot', '人間 + AIライブ — 共同配信パイロット'], ['Natural Presence — Motion + Backchannels', '自然な存在感 — モーション + 相づち'], ['Governed Autopilot — Safer at Scale', '統制されたオートパイロット — 安全にスケール'],
     ['Headless browser-based Live2D recording — no GPU needed. Trigger expressions with emotion markers (*happy*, *surprised*), add TTS voice, background music, and auto-burn subtitles into the final MP4.', 'ヘッドレスブラウザでLive2Dを収録。GPUは不要です。感情マーカーで表情を切り替え、TTS音声・BGM・字幕を最終MP4へ自動で焼き込みます。'], ['Upload a song → separate vocals with Demucs → convert voice via RVC API → mix with FFmpeg → generate lip-sync data → render the final video. Karaoke creation and LRC/MusicXML notation supported.', '曲をアップロード → Demucsでボーカル分離 → RVC APIで声変換 → FFmpegでミックス → リップシンク生成 → 最終動画をレンダリング。カラオケ作成とLRC/MusicXMLにも対応。'], ['Put 2–4 Live2D talents on one stage. A floor director balances airtime, obeys direct mentions, keeps pair threads alive, and caps consecutive turns — alongside real-time Twitch & Kick chat, speech queuing, and an OBS browser source. NEW: live follow goals with fireworks, sprite girls greeting every follower, and a daily auto-stream window so the show runs while you\'re literally asleep uwu.', '2〜4人のLive2Dタレントをひとつのステージに。フロアディレクターが発話量を均し、名指しに応え、ペアの会話を保ち、連続ターンに上限を設けます。さらにTwitch・Kickのリアルタイムチャット、発話キュー、OBSブラウザソースに対応。NEW：花火つきフォローゴール、フォロワーを出迎えるスプライトの女の子たち、寝ている間も配信が続く毎日の自動配信ウィンドウ、うゅ〜。'], ['Unified inbox for unanswered comments & mentions across YouTube, Instagram, and Twitter. AI drafts replies, tracks follower deltas per platform, and lets you mark interactions answered with one click.', 'YouTube、Instagram、Twitterの未返信コメントとメンションをひとつの受信トレイに集約。AI返信案、プラットフォーム別フォロワー増減、ワンクリック返信済み管理に対応。'], ['Log donations from YouTube, Twitch, and Fanbox. USD-normalized revenue comparison, monthly growth charts, currency mix, top supporter rankings, 3-month forecast with trend indicator, and CSV/JSON exports.', 'YouTube、Twitch、Fanboxの寄付を記録。USD換算の収益比較、月次成長グラフ、通貨内訳、支援者ランキング、3か月予測、CSV/JSON出力を利用できます。'], ['At 2 AM JST, Daily mode cooks tomorrow’s three Shorts plus three social posts for every connected platform. Buffer mode keeps a ready-to-publish stash so the calendar never looks abandoned.', 'JST午前2時に、Dailyモードが翌日のShorts 3本と接続済みプラットフォームごとのSNS投稿3本を作成。Bufferモードはすぐ公開できる在庫を保ち、カレンダーをさみしくさせません。'], ['Transcribe long footage, correct captions, generate chapters, detect spicy highlight moments, and turn a stream-sized monster into short-form clips with platform-ready packaging.', '長尺映像を文字起こしし、字幕を修正、チャプターを生成、見どころを検出。長い配信をプラットフォーム向け短尺クリップへ変換します。'], ['Send heavy renders to batch workers with idempotency keys, renewable leases, heartbeats, and abandoned-job recovery. Watch scheduler health and metrics, retry failed uploads with backoff, and ping Discord when a pipeline starts acting possessed.', '重いレンダリングを冪等キー・更新可能なリース・ハートビート・中断ジョブの復旧つきでバッチワーカーへ送信。スケジューラーの健全性とメトリクスを監視し、失敗したアップロードをバックオフ再試行、異常時はDiscordへ通知します。'],
-    ['Paste a YouTube URL, choose an angle ("wholesome roast, playful analysis, hype commentary"), pick VTuber position (Bottom Left / Center / Right) and beats count — AI generates a timestamped script and records the video.', 'YouTube URLを貼り、切り口を選び、VTuber位置とビート数を設定。AIがタイムスタンプ付きの台本を生成し、動画を収録します。'], ['Generate character art via Stable Diffusion with full control: sampler, width/height, CFG scale, seed, batch sizes (1, 4, 10, 25, 50, 💯), HR upscaling, face restore, meme mode with top/bottom text, and auto emotion detection.', 'Stable Diffusionでキャラクターアートを生成。サンプラー、サイズ、CFG、シード、バッチ数、HRアップスケール、顔修復、上下テキストのミームモード、感情自動検出まで細かく調整できます。'], ['Auto-find the best frame with AI, apply styles (default / vibrant / dramatic / soft / neon), add text overlays, compare styles side-by-side, and batch generate for your entire queue at once.', 'AIが最高のフレームを自動検出。スタイル適用、文字オーバーレイ、横並び比較、キュー全体の一括生成に対応。'], ['Track YouTube Videos, Instagram Posts, Total Views, Total Likes, Total Comments, and Engagement Rate. See top 3 performing content by platform, monthly activity, best posting times, and top emojis.', 'YouTube動画、Instagram投稿、総視聴数、いいね、コメント、エンゲージメント率を追跡。プラットフォーム別トップ3、月間活動、最適投稿時間、人気絵文字を確認できます。'], ['Real-time SEO score (A/B/C/D grade), keywords found, hooks found, emojis found. AI generates viral titles with style presets, analyzes descriptions (word count, CTAs, timestamps, hashtags), and suggests keywords.', 'リアルタイムSEOスコア（A〜D）、キーワード・フック・絵文字を解析。AIがスタイル別にバイラルタイトルを作成し、説明文とキーワードも提案します。'], ['Filter by region (US, Japan, UK, Korea…) and niche (VTuber, Gaming, Anime, React, ASMR, Music). See rising queries, virality scores (High/Medium/Low), and one-click create content from any trending keyword.', '地域とジャンルで絞り込み。急上昇クエリ、バイラルスコア、トレンドキーワードからのワンクリックコンテンツ作成を利用できます。'], ['Create users, assign roles (Creator → Editor → Manager → Moderator → Admin), reset passwords, and configure CORS allowed origins. Rate-limited logins with Discord alerts after 3 failed attempts.', 'ユーザー作成、役割付与、パスワードリセット、CORS許可オリジン設定に対応。ログインはレート制限され、3回失敗するとDiscordへ通知します。'],
+    ['Generate character art via Stable Diffusion with full control: sampler, width/height, CFG scale, seed, batch sizes (1, 4, 10, 25, 50, 💯), HR upscaling, face restore, meme mode with top/bottom text, and auto emotion detection.', 'Stable Diffusionでキャラクターアートを生成。サンプラー、サイズ、CFG、シード、バッチ数、HRアップスケール、顔修復、上下テキストのミームモード、感情自動検出まで細かく調整できます。'], ['Auto-find the best frame with AI, apply styles (default / vibrant / dramatic / soft / neon), add text overlays, compare styles side-by-side, and batch generate for your entire queue at once.', 'AIが最高のフレームを自動検出。スタイル適用、文字オーバーレイ、横並び比較、キュー全体の一括生成に対応。'], ['Track YouTube Videos, Instagram Posts, Total Views, Total Likes, Total Comments, and Engagement Rate. See top 3 performing content by platform, monthly activity, best posting times, and top emojis.', 'YouTube動画、Instagram投稿、総視聴数、いいね、コメント、エンゲージメント率を追跡。プラットフォーム別トップ3、月間活動、最適投稿時間、人気絵文字を確認できます。'], ['Real-time SEO score (A/B/C/D grade), keywords found, hooks found, emojis found. AI generates viral titles with style presets, analyzes descriptions (word count, CTAs, timestamps, hashtags), and suggests keywords.', 'リアルタイムSEOスコア（A〜D）、キーワード・フック・絵文字を解析。AIがスタイル別にバイラルタイトルを作成し、説明文とキーワードも提案します。'], ['Filter by region (US, Japan, UK, Korea…) and niche (VTuber, Gaming, Anime, React, ASMR, Music). See rising queries, virality scores (High/Medium/Low), and one-click create content from any trending keyword.', '地域とジャンルで絞り込み。急上昇クエリ、バイラルスコア、トレンドキーワードからのワンクリックコンテンツ作成を利用できます。'], ['Create users, assign roles (Creator → Editor → Manager → Moderator → Admin), reset passwords, and configure CORS allowed origins. Rate-limited logins with Discord alerts after 3 failed attempts.', 'ユーザー作成、役割付与、パスワードリセット、CORS許可オリジン設定に対応。ログインはレート制限され、3回失敗するとDiscordへ通知します。'],
     ['Creator', 'クリエイター'], ['Editor', 'エディター'], ['Manager', 'マネージャー'], ['Moderator', 'モデレーター'], ['Admin', '管理者'], ['Web Framework', 'Webフレームワーク'], ['Primary Database', 'メインデータベース'], ['Cache + Sessions', 'キャッシュ + セッション'], ['Video Processing', '動画処理'], ['Vocal Separation', 'ボーカル分離'], ['Local LLM', 'ローカルLLM'], ['AI Generation', 'AI生成'], ['Headless Browser', 'ヘッドレスブラウザ'], ['Virality ML', 'バイラル予測ML'], ['Fast Event Loop', '高速イベントループ'], ['Job Scheduling', 'ジョブスケジューリング'], ['Observability', '可観測性'],
-    ['Ready to run your VTuber Empire?', 'VTuber帝国を動かす準備、できた？'], ['❤️ Support on Patreon', '❤️ Patreonで応援する'], ['Built with ♥ ·', '♥ と一緒につくられました ·'], ['Support on Patreon', 'Patreonで応援する']
+    ['❤️ Support on Patreon', '❤️ Patreonで応援する'], ['Built with ♥ ·', '♥ と一緒につくられました ·'], ['Support on Patreon', 'Patreonで応援する']
   ]);
   const originalText = new WeakMap();
   function translateStaticText(language) {
